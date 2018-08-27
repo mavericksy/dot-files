@@ -1,0 +1,116 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+-	init.vim	/^noremap - dd k P$/;"	m
+/	init.vim	/^nnoremap \/ \/\\v$/;"	m
+/	init.vim	/^vnoremap \/ \/\\v$/;"	m
+;	init.vim	/^nnoremap ; :$/;"	m
+<C-h>	init.vim	/^noremap <C-h> <C-w>h$/;"	m
+<C-j>	init.vim	/^noremap <C-j> <C-w>j$/;"	m
+<C-k>	init.vim	/^noremap <C-k> <C-w>k$/;"	m
+<C-l>	init.vim	/^noremap <C-l> <C-w>l$/;"	m
+<F1>	init.vim	/^noremap! <F1> <Esc>$/;"	m
+<Leader>v	init.vim	/^nnoremap <silent> <Leader>v :NERDTreeFind<CR>$/;"	m
+<c-u>	init.vim	/^inoremap <c-u> <esc>viwUi$/;"	m
+<c-u>	init.vim	/^nnoremap <c-u> viwU$/;"	m
+<down>	init.vim	/^noremap <down> <nop>$/;"	m
+<esc>	init.vim	/^inoremap <esc> <nop>$/;"	m
+<leader>;	init.vim	/^nnoremap <leader>; ;$/;"	m
+<leader><space>	init.vim	/^nnoremap <leader><space> :noh<cr>$/;"	m
+<leader>dk	init.vim	/^nnoremap <leader>dk :call pdv#DocumentWithSnip()<CR>$/;"	m
+<leader>epv	init.vim	/^nnoremap <silent> <leader>epv :e \/etc\/php.ini<CR>$/;"	m
+<leader>ev	init.vim	/^nnoremap <silent> <leader>ev :e $MYVIMRC<CR>$/;"	m
+<leader>gb	init.vim	/^nnoremap <leader>gb :ls<CR>:b<Space>$/;"	m
+<leader>lk	init.vim	/^nnoremap <leader>lk :%s\/\\s+$\/\/<CR>:let @\/=''<CR>$/;"	m
+<leader>nt	init.vim	/^noremap <leader>nt :NERDTreeToggle<CR>$/;"	m
+<leader>s<space>	init.vim	/^nnoremap <leader>s<space> <Plug>(unite_restart)$/;"	m
+<leader>spv	init.vim	/^nnoremap <silent> <leader>spv :! sudo systemctl restart httpd<CR>$/;"	m
+<leader>sv	init.vim	/^nnoremap <silent> <leader>sv :so $MYVIMRC<CR>$/;"	m
+<leader>tF	init.vim	/^nmap <silent> <leader>tF :TestFile<CR>$/;"	m
+<leader>tL	init.vim	/^nmap <silent> <leader>tL :TestLast<CR>$/;"	m
+<leader>tN	init.vim	/^nmap <silent> <leader>tN :TestNearest<CR>$/;"	m
+<leader>tS	init.vim	/^nmap <silent> <leader>tS :TestSuite<CR>$/;"	m
+<leader>tV	init.vim	/^nmap <silent> <leader>tV :TestVisit<CR>$/;"	m
+<leader>us	init.vim	/^nnoremap <leader>us :split<cr> :<C-u>Unite -start-insert file_rec\/async<cr>$/;"	m
+<left>	init.vim	/^noremap <left> <nop>$/;"	m
+<right>	init.vim	/^noremap <right> <nop>$/;"	m
+<tab>	init.vim	/^inoremap <expr><tab> pumvisible() ? "\\<c-n>" : "\\<tab>"$/;"	m
+<up>	init.vim	/^noremap <up> <nop>$/;"	m
+Bs	init.vim	/^command! -nargs=1 Bs :call BufSel("<args>")$/;"	c
+BufSel	init.vim	/^function! BufSel(pattern)$/;"	f
+DefaultWorkspace	init.vim	/^command! -register DefaultWorkspace call DefaultWorkspace()$/;"	c
+DefaultWorkspace	init.vim	/^function! DefaultWorkspace()$/;"	f
+DeleteTrailingWS	init.vim	/^func! DeleteTrailingWS()$/;"	f
+NERDRemoveExtraSpaces	init.vim	/^let NERDRemoveExtraSpaces=1$/;"	v
+NERDSpaceDelims	init.vim	/^let NERDSpaceDelims=1               " space around delimiters$/;"	v
+NERDTreeAutoDeleteBuffer	init.vim	/^let NERDTreeAutoDeleteBuffer = 1$/;"	v
+NERDTreeDirArrows	init.vim	/^let NERDTreeDirArrows = 1$/;"	v
+NERDTreeMinimalUI	init.vim	/^let NERDTreeMinimalUI = 1$/;"	v
+Tlist_Use_Right_Window	init.vim	/^let Tlist_Use_Right_Window = 1$/;"	v
+Tlist_WinWidth	init.vim	/^let Tlist_WinWidth = 20$/;"	v
+g:NERDTreeIndicatorMapCustom	init.vim	/^let g:NERDTreeIndicatorMapCustom = {$/;"	v
+g:NERDTreeWinSize	init.vim	/^let g:NERDTreeWinSize=28$/;"	v
+g:UltiSnipsEditSplit	init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	init.vim	/^let g:UltiSnipsExpandTrigger="aaa"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	init.vim	/^let g:UltiSnipsJumpBackwardTrigger="www"$/;"	v
+g:UltiSnipsJumpForwardTrigger	init.vim	/^let g:UltiSnipsJumpForwardTrigger="sss"$/;"	v
+g:UltiSnipsSnippetDirectories	init.vim	/^let g:UltiSnipsSnippetDirectories=["UltiSnips"]$/;"	v
+g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#formatter	init.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v
+g:airline_highlighting_cache	init.vim	/^let g:airline_highlighting_cache = 1$/;"	v
+g:airline_powerline_fonts	init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_theme	init.vim	/^let g:airline_theme='hybrid'$/;"	v
+g:auto_save	init.vim	/^let g:auto_save = 1$/;"	v
+g:auto_save_silent	init.vim	/^let g:auto_save_silent = 1$/;"	v
+g:deoplete#auto_complete_start_length	init.vim	/^let g:deoplete#auto_complete_start_length = 1$/;"	v
+g:deoplete#enable_at_startup	init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:deoplete#ignore_sources	init.vim	/^let g:deoplete#ignore_sources.php = ['omni']$/;"	v
+g:easytags_async	init.vim	/^let g:easytags_async = 1$/;"	v
+g:easytags_dynamic_files	init.vim	/^let g:easytags_dynamic_files = 2$/;"	v
+g:easytags_events	init.vim	/^let g:easytags_events = ['BufReadPost', 'BufWritePost']$/;"	v
+g:easytags_resolve_links	init.vim	/^let g:easytags_resolve_links = 1$/;"	v
+g:easytags_suppress_ctags_warning	init.vim	/^let g:easytags_suppress_ctags_warning = 1$/;"	v
+g:hybrid_custom_term_colors	init.vim	/^let g:hybrid_custom_term_colors = 1$/;"	v
+g:hybrid_reduced_contrast	init.vim	/^let g:hybrid_reduced_contrast = 1$/;"	v
+g:nerdtree_tabs_open_on_console_startup	init.vim	/^let g:nerdtree_tabs_open_on_console_startup = 0$/;"	v
+g:nvimux_new_window_buffer	init.vim	/^let g:nvimux_new_window_buffer = 'single'$/;"	v
+g:nvimux_open_term_by_default	init.vim	/^let g:nvimux_open_term_by_default = 'true'$/;"	v
+g:nvimux_prefix	init.vim	/^let g:nvimux_prefix = '<C-a>'$/;"	v
+g:nvimux_quickterm_direction	init.vim	/^let g:nvimux_quickterm_direction = 'botright'$/;"	v
+g:nvimux_quickterm_orientation	init.vim	/^let g:nvimux_quickterm_orientation = 'vertical'$/;"	v
+g:nvimux_quickterm_scope	init.vim	/^let g:nvimux_quickterm_scope = 't'$/;"	v
+g:nvimux_quickterm_size	init.vim	/^let g:nvimux_quickterm_size = '80'$/;"	v
+g:pad#dir	init.vim	/^let g:pad#dir="~\/Documents\/Notes"$/;"	v
+g:pdv_template_dir	init.vim	/^let g:pdv_template_dir = $HOME ."\/.config\/nvim\/plugged\/pdv\/templates_snip"$/;"	v
+g:quicktask_autosave	init.vim	/^let g:quicktask_autosave = 1$/;"	v
+g:slimv_impl	init.vim	/^let g:slimv_impl = 'sbcl'$/;"	v
+g:slimv_keybindings	init.vim	/^let g:slimv_keybindings = 2$/;"	v
+g:slimv_lisp	init.vim	/^let g:slimv_lisp = '\/usr\/bin\/sbcl'$/;"	v
+g:slimv_repl_simple_eval	init.vim	/^let g:slimv_repl_simple_eval = 1$/;"	v
+g:slimv_repl_split	init.vim	/^let g:slimv_repl_split = 2$/;"	v
+g:slimv_swank_cmd	init.vim	/^let g:slimv_swank_cmd = '! sbcl --load \/home\/sumosudo\/.config\/nvim\/plugged\/slimv\/slime\/start-swank.lisp'$/;"	v
+g:syntastic_aggregate_errors	init.vim	/^let g:syntastic_aggregate_errors = 1$/;"	v
+g:syntastic_always_populate_loc_list	init.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	init.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	init.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_mode_map	init.vim	/^let g:syntastic_mode_map = {$/;"	v
+g:syntastic_php_checkers	init.vim	/^let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']$/;"	v
+g:syntastic_quiet_messages	init.vim	/^let g:syntastic_quiet_messages = { "type": "style" }$/;"	v
+g:unite_source_history_yank_enable	init.vim	/^let g:unite_source_history_yank_enable = 1$/;"	v
+g:unite_source_rec_async_command	init.vim	/^  let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'$/;"	v
+gY	init.vim	/^noremap gY gg"+yG$/;"	m
+gy	init.vim	/^vnoremap gy "+y$/;"	m
+j	init.vim	/^nnoremap j gj$/;"	m
+jk	init.vim	/^inoremap jk <esc>$/;"	m
+k	init.vim	/^nnoremap k gk$/;"	m
+mapMoveToWindowInDirection	init.vim	/^func! s:mapMoveToWindowInDirection(direction)$/;"	f
+mapleader	init.vim	/^let mapleader = ","$/;"	v
+maplocalleader	init.vim	/^let maplocalleader = "\\\\"$/;"	v
+test#project_root	init.vim	/^let test#project_root = "\/home\/sumosudo\/Projects\/MyECommerce\/playlottoinafrica\/application\/tests"$/;"	v
+test#strategy	init.vim	/^let test#strategy = 'asyncrun'$/;"	v
+test#strategy	init.vim	/^let test#strategy = 'dispatch'$/;"	v
+w!!	init.vim	/^cnoremap w!! w !sudo tee % >\/dev\/null$/;"	m
