@@ -104,8 +104,7 @@ set viminfo^=%
 set expandtab                   " Expand tabs to spaces
 set autoindent smartindent      " auto/smart indent
 set copyindent                  " copy previous indentation on auto indent
-set smarttab                    " At start of line, <Tab> inserts shift width
-"   spaces, <Bs> deletes shift width spaces.
+set smarttab                    " At start of line, <Tab> inserts shift width spaces, <Bs> deletes shift width spaces.
 set expandtab softtabstop=4 shiftwidth=4
 
 set wrap                        " wrap lines
@@ -245,6 +244,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-zsh'
 Plug 'kristijanhusak/deoplete-phpactor'
 Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
+Plug 'zchee/deoplete-clang'
 
 """""""""
 "  LSP  "
@@ -325,6 +325,7 @@ Plug 'vim-scripts/BufOnly.vim'
 """"""""""
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/taglist.vim'
+Plug 'majutsushi/tagbar'
 
 """""""""
 "  GIT  "
@@ -347,11 +348,8 @@ Plug 'jlfwong/vim-mercenary'
 """"""""""
 Plug 'kovisoft/slimv'
 Plug 'tpope/vim-classpath'
-" Track the engine.
 Plug 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-" Trinity for SourceExpl
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
@@ -411,6 +409,10 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'ludovicchabant/vim-lawrencium'
+
+" C
+Plug 'vim-scripts/c.vim'
+Plug 'vim-scripts/Conque-GDB'
 
 call plug#end()
 
@@ -649,6 +651,14 @@ let g:neomake_php_php_maker = {
        \ 'postprocess': function('SetErrorType'),
 \ }
 
+let g:neomake_php_phpcs_maker = {
+        \ 'args': ['--report=csv', '--standard=PSR2'],
+        \ 'errorformat':
+            \ '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
+            \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',
+        \ 'postprocess': function('SetWarningType'),
+ \ }
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                     LSP                                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -755,7 +765,8 @@ let g:deoplete#enable_refresh_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 1
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+let deoplete#sources#jedi#show_docstring = 1
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
@@ -959,6 +970,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " == SWANK Slimv
 let g:slimv_swank_cmd = '! sbcl --load /home/sumosudo/.config/nvim/plugged/slimv/slime/start-swank.lisp'
+let g:slimv_swank_cmd = '! sbcl --load ~/.config/nvim/plugged/slimv/slime/start-swank.lisp'
 let g:slimv_lisp = '/usr/bin/sbcl'
 let g:slimv_keybindings = 2
 let g:slimv_impl = 'sbcl'
