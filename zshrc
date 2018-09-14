@@ -101,5 +101,4 @@ PERL_LOCAL_LIB_ROOT="/home/sumosudo/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LI
 PERL_MB_OPT="--install_base \"/home/sumosudo/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/sumosudo/perl5"; export PERL_MM_OPT;
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
