@@ -19,6 +19,9 @@ set showcmd
 set incsearch
 set hlsearch
 
+set autoread
+au FocusGained * :checktime
+
 set showmatch
 set mat=2
 
