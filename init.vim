@@ -63,7 +63,7 @@ autocmd BufWritePre * :call DeleteTrailingWS()
 autocmd FocusLost,InsertLeave,BufLeave * :wa
 autocmd VimEnter,BufRead,BufNewFile *.asd set filetype=lisp
 autocmd VimEnter,BufRead,BufNewFile,WinEnter *.qt set filetype=quicktask
-autocmd VimEnter * TagbarToggle
+"autocmd VimEnter * TagbarToggle
 
 "autocmd WinLeave * if @% != 'REPL' |
 ""      \ :exe bufwinnr(bufname('REPL')) "windo resize 6" | :winc p | endif
@@ -108,7 +108,7 @@ set smarttab                    " At start of line, <Tab> inserts shift width sp
 set expandtab softtabstop=4 shiftwidth=4
 
 set wrap                        " wrap lines
-set textwidth=80
+set textwidth=120
 
 set title                " change the terminal's title
 set visualbell           " don't beep
@@ -134,7 +134,8 @@ inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU
 
 " Learn to use the jk key combo to escape insert mode
-inoremap jk <esc>
+inoremap jk <esc>`^
+inoremap jkl; <esc>:wq<cr>
 inoremap <esc> <nop>
 
 " Avoid accidental hits of <F1> while aiming for <Esc>
@@ -151,8 +152,11 @@ nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Quickly edit the php.ini file
-nnoremap <silent> <leader>epv :e /etc/php.ini<CR>
-nnoremap <silent> <leader>spv :! sudo systemctl restart httpd<CR>
+nnoremap <silent> <leader>ep :e /etc/php.ini<CR>
+nnoremap <silent> <leader>sp :! sudo systemctl restart httpd<CR>
+
+" .tmux.conf
+nnoremap <silent> <leader>et :e ~/.tmux.conf
 
 " Use the damn hjkl keys
 noremap <up> <nop>
@@ -187,6 +191,16 @@ noremap gY gg"+yG
 
 " quickly open a buffer list and wait for user command
 nnoremap <leader>gb :ls<CR>:b<Space>
+
+" Lawrencium
+nnoremap <leader>HL :Hglog<CR>
+nnoremap <leader>HS :Hgstatus<CR>
+nnoremap <leader>HC :Hgcommit<CR>
+nnoremap <leader>HT :Hglogthis<CR>
+nnoremap <leader>HA :Hgannotate<CR>
+
+" RipGrep
+nnoremap <Space><Space><Space> :Rg
 
 " see terminal edge
 if (exists('+colorcolumn'))
@@ -409,6 +423,8 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'ludovicchabant/vim-lawrencium'
+Plug 'jremmen/vim-ripgrep'
+Plug 'christoomey/vim-tmux-navigator'
 
 " C
 Plug 'vim-scripts/c.vim'
@@ -1066,3 +1082,5 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
+
+nnoremap <leader>bb :buffers<cr>:buffer<Space>
