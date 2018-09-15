@@ -1,0 +1,67 @@
+priority 50
+
+################################################################################
+#                          Singleton or Fancy Global                           #
+################################################################################
+
+# A collection of singletons.
+snippet pattern_registry "Abstract Registry" b
+class ${1:ThisRegistry}Registry ${2:}{
+
+	/** @var self $_instance*/
+	protected static $_instance = [];
+
+        /**
+         * @returns array
+         */
+        public static function getInstance($key) {
+		return static::$_instance[$key];
+	}
+
+	/*
+	 * 
+	 * @param string $key
+	 * @param object $object
+	 */
+	public static function setInstance($key, $object) {
+		static::$_instance[$key] = $object;
+	}
+
+	/**
+	 *  do not allow create new instance by new keyword
+	 * 
+	 */
+	protected function __construct(){}
+
+	/**
+	 *  Do not clone the object
+	 */
+	protected function __clone(){}
+
+	/**
+	 *  Do not allow reserialization of this object
+	 */
+	protected function __wakeup(){}
+}
+endsnippet
+
+################################################################################
+#                           Factory or Object Maker                            #
+################################################################################
+
+snippet interface_factory "Interface Factory" b
+interface i${1:ThisFactory}Factory ${2:}{
+	public function get$1Object(String $object);
+}
+endsnippet
+
+################################################################################
+#                           Strategy or HIdeen Algo                            #
+################################################################################
+snippet interface_strategy "Interface Strategy" b
+interface i${1:ThisStrategy}Strategy ${2:}{
+
+}
+endsnippet
+
+# :vim:ft=snippets:

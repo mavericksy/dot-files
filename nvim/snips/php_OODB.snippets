@@ -1,0 +1,13 @@
+priority 50
+
+snippet metadata_get_meta "->metatdata->get_meta($guid, $where)" b
+$this->${1:echosignadobe}
+	->metadata
+	->get_meta(${2:$GUID}, ${3:'name'} ${4:, TRUE});
+endsnippet
+
+snippet metadata_get_by "->metadata->get_by()" b
+$this->${1:echosignadobe}
+	->metadata
+	->get_by(${2:$GUID}, ${3:['name'=>$NAME, ...]});
+endsnippet

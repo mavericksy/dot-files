@@ -1,0 +1,546 @@
+priority 50
+
+global !p
+import vim
+
+# Set g:ultisnips_php_scalar_types to 1 if you'd like to enable PHP 7's scalar types for return values
+def isPHPScalarTypesEnabled():
+	isEnabled = vim.eval("get(g:, 'ultisnips_php_scalar_types', 0)") == "1"
+	return isEnabled or re.match('<\?php\s+declare\(strict_types=[01]\);', '\n'.join(vim.current.window.buffer))
+endglobal
+
+snippet <?
+	<?php
+endsnippet
+
+snippet def_basepath "basepath check" b
+defined('BASEPATH') OR exit('No direct script access allowed.');
+endsnippet
+
+snippet ft "PHPDoc top of file" b
+<?php
+/**
+ * Class ${1:CLASS_NAME}
+ * @package
+ * @author	`!v g:snips_author`
+ * @copyright
+ * @license
+ * @link	${3:https://datatill.com}
+ * @since
+ */
+defined('BASEPATH') OR exit('No direct script access allowed.');
+
+$0
+endsnippet
+
+snippet ct "PHPDoc and class template" b
+/**
+ * Class $1
+ *
+ * $11
+ *
+ * @package    $4
+ * @subpackage $5
+ * @category   $6
+ * @author     ${7:`!v g:snips_author`}
+ * @copyright  $9
+ * @since      ${10:?.?.?}
+ * @version    ${11:?.?.?}
+ */
+class $1 ${3:extends $2}
+{
+        $0
+}
+endsnippet
+
+snippet class "Class declaration template" b
+<?php
+
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+/**
+ * Class ${1:`!p snip.rv=snip.basename`}
+ * $3
+ * @author ${2:`!v g:snips_author`}
+ */
+class $1
+{
+        $0
+}
+endsnippet
+
+snippet i
+	interface ${1:}
+	{
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet func "visual function" b
+	function ${1}(${3})
+	{
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet gm "PHP Class Getter" b
+/**
+ * Getter for $1
+ *
+ * @return ${2:string}
+ */
+public function get${1/\w+\s*/\u$0/}()`!p snip.rv = ': '+t[2] if isPHPScalarTypesEnabled() else ''`
+{
+    return $this->$1;
+}
+endsnippet
+
+snippet sm "PHP Class Setter" b
+/**
+ * Setter for $1
+ *
+ * @param ${2:string} $$1
+ * @return ${3:`!p snip.rv=snip.basename`}
+ */
+public function set${1/\w+\s*/\u$0/}(${4:${2/(void|string|int|integer|double|float|object|boolear|null|mixed|number|resource)|(.*)/(?1::$2 )/}}$$1)
+{
+    $this->$1 = $$1;
+
+    ${5:return $this;}
+}
+endsnippet
+
+snippet gs "PHP Class Getter Setter" b
+/**
+ * Getter for $1
+ *
+ * @return ${2:string}
+ */
+public function get${1/\w+\s*/\u$0/}()`!p snip.rv = ': '+t[2] if isPHPScalarTypesEnabled() else ''`
+{
+    return $this->$1;
+}
+
+/**
+ * Setter for $1
+ *
+ * @param $2 $$1
+ * @return ${3:`!p snip.rv=snip.basename`}
+ */
+public function set${1/\w+\s*/\u$0/}(${4:${2/(void|string|int|integer|double|float|object|boolear|null|mixed|number|resource)|(.*)/(?1::$2 )/}}$$1)
+{
+    $this->$1 = $$1;
+
+    ${5:return $this;}
+}
+endsnippet
+
+snippet pub "Public function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+public function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pro "Protected function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+protected function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pri "Private function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+private function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pubs "Public static function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+public static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pros "Protected static function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+protected static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pris "Private static function" b
+/**
+ * ${3:undocumented function}
+ *
+ * @return ${4:void}
+ */
+private static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet fu "Function snip" b
+function ${1:name}(${2:$param})
+{
+	${VISUAL}${3:return null;}
+}
+$0
+endsnippet
+
+snippet new "New class instance" b
+$${1:variableName} = new ${2:${1/\w+\s*/\u$0/}}($3);
+$0
+endsnippet
+
+snippet construct "__construct()" b
+/**
+ * @param $2mixed ${1/, /\n     * \@param mixed /g}
+ */
+public function __construct(${1:$dependencies})
+{${1/\$(\w+)(, )*/\n        $this->$1 = $$1;/g}
+}
+$0
+endsnippet
+
+snippet ?: "Terniary"
+	(${1:true}) 
+		? ${2:a} 
+		: ${0};
+endsnippet
+
+# Start Docblock
+snippet /*
+	/**
+	 * ${0}
+	 */
+endsnippet
+# Class - post doc
+snippet doc_cp
+	/**
+	 * ${1:undocumented class}
+	 *
+	 * @package ${2:default}
+	 * @subpackage ${3:default}
+	 * @author ${4:Shaun Pearce}
+	 */
+endsnippet
+# Class Variable - post doc
+snippet doc_vp
+	/**
+	 * ${1:undocumented class variable}
+	 *
+	 * @var ${2:string}
+	 */
+endsnippet
+# Class Variable
+snippet doc_v
+	/**
+	 * ${3:undocumented class variable}
+	 *
+	 * @var ${4:string}
+	 */
+	${1:var} $${2};
+endsnippet
+# Class
+snippet doc_c
+	/**
+	 * ${3:undocumented class}
+	 *
+	 * @package ${4:default}
+	 * @subpackage ${5:default}
+	 * @author ${6:`!v g:snips_author`}
+	 */
+	${1:}class ${2:}
+	{
+		${0:${VISUAL}}
+	} // END $1class $2
+endsnippet
+# Constant Definition - post doc
+snippet doc_dp
+	/**
+	 * ${1:undocumented constant}
+	 */
+endsnippet
+# Constant Definition
+snippet doc_d
+	/**
+	 * ${3:undocumented constant}
+	 */
+	define(${1}, ${2});
+endsnippet
+# Function - post doc
+snippet doc_fp
+	/**
+	 * ${1:undocumented function}
+	 *
+	 * @return ${2:void}
+	 * @author ${3:Shaun Pearce}
+	 */
+endsnippet
+
+# Function signature
+snippet doc_s
+	/**
+	 * ${4:undocumented function}
+	 *
+	 * @return ${5:void}
+	 * @author ${6:`!v g:snips_author`}
+	 */
+	${1}function ${2}(${3});
+endsnippet
+# Function
+snippet doc_f
+	/**
+	 * ${4:undocumented function}
+	 *
+	 * @return ${5:void}
+	 * @author ${6:`!v g:snips_author`}
+	 */
+	${1}function ${2}(${3})
+	{${0}
+	}
+endsnippet
+# Header
+snippet doc_h
+	/**
+	 * ${1}
+	 *
+	 * @author ${2:`!v g:snips_author`}
+	 * @version ${3:$Id$}
+	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
+	 * @package ${0:default}
+	 */
+endsnippet
+
+# Form snippets codeigniter
+snippet data_i "Data input" b
+	$data['${1:name}'] = array_merge(
+		$this->config->item('${2:name}', 'inputs'),
+		array('value' => set_value('${3:name}'))
+	);
+endsnippet
+
+snippet ddd "Kint +d();die();"
+	+d($0);die();
+endsnippet
+
+snippet ns "namespace declaration" b
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+endsnippet
+
+
+snippet interface "Interface declaration template" b
+<?php
+
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+/**
+ * Interface ${1:`!p snip.rv=snip.basename`}
+ * @author ${2:`!v g:snips_author`}
+ */
+interface $1
+{
+	public function ${3:someFunction}();$4
+}
+endsnippet
+
+snippet trait "Trait declaration template" b
+<?php
+
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+/**
+ * Trait ${1:`!p snip.rv=snip.basename`}
+ * @author ${2:`!v g:snips_author`}
+ */
+trait $1
+{
+}
+endsnippet
+
+
+# PHPUnit snippets
+snippet testcase "class XYZTest extends \PHPUnit_Framework_TestCase { ... }"
+<?php
+
+namespace `!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`;
+
+/**
+ * @author `!v g:snips_author`
+ */
+class `!p
+snip.rv = re.match(r'.*(?=\.)', fn).group()
+` extends \PHPUnit_Framework_TestCase
+{
+	public function test$1()
+	{
+		${0:${VISUAL}}
+	}
+}
+endsnippet
+
+snippet testcase6 "class XYZTest extends TestCase { ... }"
+<?php
+
+namespace `!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`;
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @author `!v g:snips_author`
+ */
+class `!p
+snip.rv = re.match(r'.*(?=\.)', fn).group()
+` extends TestCase
+{
+	public function test$1()
+	{
+		${0:${VISUAL}}
+	}
+}
+endsnippet
+
+snippet sep "Comment seperator //---..." b
+
+`!p
+snip.rv='//-----------------------------------------------------------------------'`
+
+endsnippet
+
+snippet theme_render "Theme Render" b
+$this->theme
+        ->set_title(lang(${1:'Overlord'}))
+        ->render(${2:$data});
+$0
+endsnippet
+
+snippet forminput "Standard form input CI" b
+
+<div class="form-group $1 <?php echo form_error('$2') ? ' has-error' : '' ?>">
+	<label for="$2" class=""><?php _e('$2') ?></label>
+	<?php echo print_input($$2, array(
+		'class' => 'form-control $3',
+		${4:'autofocus' => 'autofocus'} ${5:, 'id' => '${2:}'})) ?>
+	<?php echo form_error('$2', '<small class="help-block">', '</small>')?>
+</div>
+
+endsnippet
+
+snippet nonce_check "Check the nonce" b
+
+        if (true !== $this->check_nonce('$1'))
+        {
+                set_alert(lang('$2'), '$3');
+                redirect('$4'${5:, 'refresh'});
+                exit;
+        }
+
+endsnippet
+
+snippet prep_validation "prep check" b
+if($this->form_validation->run() == false){
+
+        $this->load->helper('form');
+
+        ${VISUAL}
+
+        $0
+}
+endsnippet
+
+snippet prep_form "prep_form helper" b
+$this->prep_form([$0]);
+endsnippet
+
+snippet prep_field "prep field" i
+['field' => '$1',
+ 'label' => '${2:lang:$1}',
+ 'rules' => '$3']${4:,}
+endsnippet
+
+snippet ld_lib "$this->load->library()" b
+$this->load->library('$0');
+endsnippet
+
+snippet ld_help "$this->load->helper()" b
+$this->load->helper('$0');
+endsnippet
+
+snippet dir_file_read "Dir File Read" b
+if ($${1:handle} = opendir(${2:'path/to/dir'}))
+{
+	while (false !== ($file = readdir($1)))
+	{
+		$file $0;
+	}
+}
+endsnippet
+
+snippet ttmy_chr "$this->my_fucntions->check_right()" bi
+$this->my_functions->check_right($0);
+endsnippet
+# :vim:ft=snippets:

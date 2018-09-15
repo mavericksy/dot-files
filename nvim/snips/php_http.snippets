@@ -1,0 +1,78 @@
+priority 50
+
+snippet http_codes_array_consts "HTTP Status Codes Array of Constants" b
+/**
+ * List of HTTP status codes.
+ */
+const HTTP_OK                    = 200;
+const HTTP_CREATED               = 201;
+const HTTP_NO_CONTENT            = 204;
+const HTTP_NOT_MODIFIED          = 304;
+const HTTP_BAD_REQUEST           = 400;
+const HTTP_UNAUTHORIZED          = 401;
+const HTTP_FORBIDDEN             = 403;
+const HTTP_NOT_FOUND             = 404;
+const HTTP_METHOD_NOT_ALLOWED    = 405;
+const HTTP_NOT_ACCEPTABLE        = 406;
+const HTTP_CONFLICT              = 409;
+const HTTP_INTERNAL_SERVER_ERROR = 500;
+const HTTP_NOT_IMPLEMENTED       = 501;
+
+/**
+ * Array of most used HTTP status codes and their message.
+ * @var array
+ */
+protected $http_status_codes = array(
+	self::HTTP_OK                    => 'OK',
+	self::HTTP_CREATED               => 'CREATED',
+	self::HTTP_NO_CONTENT            => 'NO CONTENT',
+	self::HTTP_NOT_MODIFIED          => 'NOT MODIFIED',
+	self::HTTP_BAD_REQUEST           => 'BAD REQUEST',
+	self::HTTP_UNAUTHORIZED          => 'UNAUTHORIZED',
+	self::HTTP_FORBIDDEN             => 'FORBIDDEN',
+	self::HTTP_NOT_FOUND             => 'NOT FOUND',
+	self::HTTP_METHOD_NOT_ALLOWED    => 'METHOD NOT ALLOWED',
+	self::HTTP_NOT_ACCEPTABLE        => 'NOT ACCEPTABLE',
+	self::HTTP_CONFLICT              => 'CONFLICT',
+	self::HTTP_INTERNAL_SERVER_ERROR => 'INTERNAL SERVER ERROR',
+	self::HTTP_NOT_IMPLEMENTED       => 'NOT IMPLEMENTED'
+);
+endsnippet
+
+snippet parse_exec_false "switch of pseudos" b
+/**
+ * Disable parsing of the {elapsed_time} and {memory_usage}
+ * pseudo-variables because we don't need them.
+ */
+$this->output->parse_exec_vars = false;
+endsnippet
+
+snippet is_*_req "Check http request" b
+/**
+ * Is ${1:xmlhttprequest} <-- request header content
+ *
+ * Test to see if a request contains the ${2:HTTP_X_REQUESTED_WITH} header.
+ *
+ * @return 	bool
+ */
+${0:}function is_$1_request()
+{
+	return ( ! empty($_SERVER['$2']) && strtolower($_SERVER['$2']) === '$1');
+}
+endsnippet
+
+snippet span_btn "span btn thin success right" bi
+<span class="btn btn-thin btn-success pull-right" onclick="${1:dt.fn();}">
+	<i class="fa fa-${3:refresh}"></i>
+	<span>&nbsp; ${2:Refresh}</span>
+</span>
+$0
+endsnippet
+snippet span-check-box-switch "checkbox switch" bi
+<div class="bootstrap-switch-container">
+	<span class="bootstrap-switch-handle-on bootstrap-switch-primary">${1:ON}</span>
+	<label class="bootstrap-switch-label">&nbsp;</label>
+	<span class="bootstrap-switch-handle-off bootstrap-switch-default">${2:Off}</span>
+	<input id="${3:active-switch}" checked="" class="make-switch" type="checkbox">
+</div>
+endsnippet

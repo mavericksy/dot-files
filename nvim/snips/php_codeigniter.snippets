@@ -1,0 +1,279 @@
+priority 50
+
+################################################################################
+#                                 log_messages                                 #
+################################################################################
+snippet log_debug "log_message('DEBUG', ??)" b
+log_message('debug', ${1:'DEBUG'});
+endsnippet
+
+################################################################################
+#                                     $this                                    #
+################################################################################
+snippet $ "$this" b
+$this
+endsnippet
+
+snippet tt "$this->" ib
+$this->$0;
+endsnippet
+
+################################################################################
+#                                   $this->ci                                 #
+################################################################################
+snippet ttc "$this->ci" bi
+$this->ci$0;
+endsnippet
+
+################################################################################
+#                                 $this->input                                 #
+################################################################################
+snippet tti "$this->input" bi
+$this->input->$0;
+endsnippet
+
+snippet ttip "$this->input->post()" ib
+$this->input->post(){}$0
+endsnippet
+
+################################################################################
+#                                $this->kbcore                                 #
+################################################################################
+snippet tkb "$this->kbcore" ib
+$this->kbcore->$0
+endsnippet
+
+################################################################################
+#                                  $this->db                                   #
+################################################################################
+snippet ttdb_query "$this->db->query()" bi
+$this->db->query($0);
+endsnippet
+
+################################################################################
+#                                 $pagination                                  #
+################################################################################
+snippet pagination_controller "$pagination controller" b
+// Create pagination.
+$this->load->library('pagination'){}
+
+// Pagination configuration.
+$config['base_url']   = $config['first_link'] = ${1:admin_url('banner')};
+$config['total_rows'] = ${2:$this->get()};
+$config['per_page']   = $this->config->item('per_page'){}
+
+// Initialize pagination.
+$this->pagination->initialize($config){}
+
+// Create pagination links.
+$data['pagination'] = $this->pagination->create_links(){}
+
+// Display limit.
+$limit = $config['per_page'];
+
+// Prepare offset.
+$offset = 0;
+if ($this->input->get('page'))
+{
+        $offset = $config['per_page'] * ($this->input->get('${3:page}') - 1){}
+}
+endsnippet
+
+
+################################################################################
+#                                 SCRIPT HTML                                  #
+################################################################################
+snippet script_base "<script base_url()>" b
+<script src="<?php echo base_url('${0:admin.js}') ?>"></script>
+endsnippet
+
+
+################################################################################
+#                              $input array stuff                              #
+################################################################################
+snippet input_opts "input array" b
+$config['${1:name}'] = array(
+        'type'    => '${2:text}',
+        'name'    => '$1',
+        'id'      => '$1',
+        'options' => array(
+                '${3:option}' => '${4:option value}',
+        ),
+){}
+endsnippet
+
+snippet input_plc "input array" b
+$config['${1:name}'] = array(
+        'type'        => '${2:text}',
+        'name'        => '$1',
+        'id'	      => '$1',
+        'placeholder' => '${1/\w+\s*/\u$0/g}'
+        ),
+){}
+endsnippet
+
+snippet curl_post_simple "c_init c_exec POST" b
+
+$curl = curl_init(${1:BASE_URI}){}
+
+curl_setopt($curl, CURLOPT_HEADER, ${2:true}){}
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, ${3:true}){}
+curl_setopt($curl, CURLOPT_POST, true){}
+curl_setopt($curl, CURLOPT_HEADER,${4:'Content-Type: application/x-www-form-urlencoded'}){}
+
+${5:$this->post_data = http_build_query($d, '', '&'){}}
+
+curl_setopt($curl, CURLOPT_POSTFIELDS, ${6:$this->post_data}){}
+
+${7:$response = curl_exec($curl){}}
+${0:$status = curl_getinfo($curl, CURLINFO_HTTP_CODE)}
+curl_close($curl){}
+endsnippet
+
+snippet func_exists " ! function_exists" b
+if ( ! function_exists('${1:function}')){
+
+	/**
+	 *
+	 * @return void
+	 * @author Shaun Pearce <shaun@datatill.com>
+	 */
+	function $1(${2:$params})
+	{
+		return ${3:null};
+	}
+}
+endsnippet
+
+snippet curl_get_simple "c_init c_exec GET" b
+$curl = curl_init(${1:BASE_URI});
+
+curl_setopt_array($curl, [
+	CURLOPT_RETURNTRANSFER => 1,
+	CURLOPT_USERAGENT      => 'DataTill'
+]);
+
+${2:$res = curl_exec($curl);}
+
+curl_close($curl);
+endsnippet
+
+snippet crud_interface_concrete_class "CRUD I Concrete Class" b
+/**
+ * ${1:Create a new row}
+ * @access 	public
+ * @param 	array 	$data 	Array of data to insert.
+ * @return 	the new row ID if found, else false.
+ */
+public function create(array $data = array()){}
+
+/**
+ * Retrieve a single row by primary key.
+ * @access 	public
+ * @param 	mixed 	$id 	The primary key value.
+ * @return 	object if found, else null
+ */
+public function get($id){}
+
+/**
+ * Retrieve a single row by arbitrary WHERE clause.
+ * @access 	public
+ * @param 	mixed 	$field 	Column name or associative array.
+ * @param 	mixed 	$match 	Comparison value.
+ * @return 	object if found, else null.
+ */
+public function get_by($field, $match = null){}
+
+/**
+ * Retrieve multiple rows by arbitrary WHERE clause.
+ * @access 	public
+ * @param 	mixed 	$field 	Column name or associative array.
+ * @param 	mixed 	$match 	Comparison value.
+ * @param 	int 	$limit 	Limit to use for getting records.
+ * @param 	int 	$offset Database offset.
+ * @return 	array o objects if found, else null.
+ */
+public function get_many($field = null, $match = null, $limit = 0, $offset = 0){}
+
+/**
+ * Retrieve all rows.
+ * @access 	public
+ * @param 	int 	$limit 	Limit to use for getting records.
+ * @param 	int 	$offset Database offset.
+ * @return 	array o objects if found, else null.
+ */
+public function get_all($limit = 0, $offset = 0){}
+
+/**
+ * Update a single row by its primary key.
+ * @access 	public
+ * @param 	mixed 	$id 	The primary key value.
+ * @param 	array 	$data 	Array of data to update.
+ * @return 	boolean
+ */
+public function update($id, array $data = array()){}
+
+/**
+ * Update all or multiple rows by arbitrary WHERE clause.
+ * @access 	public
+ * @return 	boolean
+ */
+public function update_by(){}
+
+/**
+ * Delete a single row by its primary key.
+ * @access 	public
+ * @param 	mixed 	$id 	The primary key value.
+ * @return 	boolean
+ */
+public function delete($id){}
+
+/**
+ * Delete multiple or all rows by arbitrary WHER clause.
+ * @access 	public
+ * @param 	mixed 	$field 	Column name or associative array.
+ * @param 	mixed 	$match 	Comparison value.
+ * @return 	boolean
+ */
+public function delete_by($field = null, $match = null){}
+endsnippet
+
+snippet superInstanceVar "$ci =& get_instance()" b
+$ci =& get_instance();
+endsnippet
+
+snippet superInstanceProp "$this->_ci =& get_instance()" b
+$this->_ci =& get_instance();
+endsnippet
+
+snippet datatables_generate "$this->dataTables->generate()" b
+$table = ${1:'TABLE_NAME';}
+$columns = [${2:ARRAY}];
+$this->datatables->generate(${3:table}, ${4:columns}, ${4:index}, ${5:filter = ''});
+endsnippet
+
+snippet hello "Description" b
+
+endsnippet
+
+snippet authuserid "$this->auth->userid()" bi
+$this->auth->userid()${0:;}
+endsnippet
+
+snippet update_variable "Variables update DB" bi
+return $this->${1:calling_class}
+->variables
+->update(${2:$this->_auth->userid()}, [
+		'name'  => ${3:'NAME OF VARIABLE'},
+		'value' => ${4:'VALUE OF VARIABLE'}]);
+endsnippet
+
+snippet get_variables_return "Variables get DB" bi
+return (${1:$this->variable})
+	? $1
+	: $this->${3:calling_class}
+	->variables
+	->get_by(${4:$this->_auth->userid()},[
+			'name' => ${5:'VALUE'}
+	]);
+endsnippet
