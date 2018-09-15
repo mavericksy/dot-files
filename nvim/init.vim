@@ -1,39 +1,21 @@
 set nocompatible
-set nu
-set relativenumber
-set t_Co=256
-set termguicolors
-set laststatus=2
-set encoding=utf-8
-set termencoding=utf-8
-set mouse=a
+filetype plugin indent on
+syntax on
 
-set winwidth=150
-set winheight=9
-set winminheight=8
-set winminwidth=5
+source $HOME/.config/nvim/vimrc/filetypes.vim
+source $HOME/.config/nvim/vimrc/looks.vim
+source $HOME/.config/nvim/vimrc/mappings.vim
+source $HOME/.config/nvim/vimrc/misc.vim
+source $HOME/.config/nvim/vimrc/plugin_configs.vim
+source $HOME/.config/nvim/vimrc/plugins.vim
+source $HOME/.config/nvim/vimrc/settings.vim
+source $HOME/.config/nvim/vimrc/spelling.vim
 
-set backspace=indent,eol,start
-set ruler
-set showcmd
-set incsearch
-set hlsearch
+" Source a local vimrc if it exists
+if filereadable(expand("$HOME/.config/nvim/nvimrc.local"))
+  source $HOME/config/nvim/nvimrc.local
+endif
 
-set autoread
-au FocusGained * :checktime
-
-set showmatch
-set mat=2
-
-set noequalalways
-
-" --- performance / buffer ---
-set hidden                  " can put buffer to the background without writing
-"   to disk, will remember history/marks.
-set lazyredraw              " don't update the display while executing macros
-set ttyfast                 " Send more characters at a given time.
-
-set magic
 
 set completeopt=longest,menuone
 set wildmenu                    " make tab completion for files/buffers act like bash
