@@ -12,3 +12,17 @@ command! Xbit call SetExecutableBit()
 " Make the file executable
 nnoremap <leader>xx :Xbit<cr>
 
+"
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+
+"autocmd BufWritePre * :call DeleteTrailingWS()
+
+
+" Write the file on insert leave  ..
+autocmd FocusLost,InsertLeave,BufLeave * :wa
+" Change the fold color
+autocmd BufEnter * :hi Folded guibg=grey guifg=blue

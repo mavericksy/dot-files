@@ -76,7 +76,6 @@ Bs	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^command! -nargs=1 Bs :call 
 BufSel	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! BufSel(pattern)$/;"	f	language:Vim
 DefaultWorkspace	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^command! -register DefaultWorkspace call DefaultWorkspace()$/;"	c	language:Vim
 DefaultWorkspace	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! DefaultWorkspace()$/;"	f	language:Vim
-DeleteTrailingWS	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^func! DeleteTrailingWS()$/;"	f	language:Vim
 deoplete#sources#jedi#show_docstring	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let deoplete#sources#jedi#show_docstring = 1$/;"	v	language:Vim
 g:airline#extensions#tabline#enabled	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v	language:Vim
 g:airline#extensions#tabline#formatter	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v	language:Vim

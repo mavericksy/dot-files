@@ -6,8 +6,8 @@ source $HOME/.config/nvim/vimrc/filetypes.vim
 source $HOME/.config/nvim/vimrc/looks.vim
 source $HOME/.config/nvim/vimrc/mappings.vim
 source $HOME/.config/nvim/vimrc/misc.vim
-source $HOME/.config/nvim/vimrc/plugin_configs.vim
 source $HOME/.config/nvim/vimrc/plugins.vim
+source $HOME/.config/nvim/vimrc/plugin_configs.vim
 source $HOME/.config/nvim/vimrc/settings.vim
 source $HOME/.config/nvim/vimrc/spelling.vim
 
@@ -16,54 +16,10 @@ if filereadable(expand("$HOME/.config/nvim/nvimrc.local"))
   source $HOME/config/nvim/nvimrc.local
 endif
 
-
-set completeopt=longest,menuone
-set wildmenu                    " make tab completion for files/buffers act like bash
-set wildmode=list:full          " show a list when pressing tab and complete
-"    first full match
-"set wildmode=list:longest,list:full
-
-set nomodeline                  " disable mode lines (security measure)
-set cursorline                  " underline the current line, for quick orientation
-
-" --- history / file handling ---
-set history=999             " history (default = 20)
-set undolevels=999          " Moar undo (default=100)
-set autoread                " reload files if changed externally
-
-" --- backup and swap files ---
-" I save all the time, those are annoying and unnecessary...
-set nobackup
-set nowritebackup
-set noswapfile
-
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-"Autocommand
-autocmd BufWritePre * :call DeleteTrailingWS()
-autocmd FocusLost,InsertLeave,BufLeave * :wa
-autocmd VimEnter,BufRead,BufNewFile *.asd set filetype=lisp
-autocmd VimEnter,BufRead,BufNewFile,WinEnter *.qt set filetype=quicktask
-"autocmd VimEnter * TagbarToggle
-
 "autocmd WinLeave * if @% != 'REPL' |
 ""      \ :exe bufwinnr(bufname('REPL')) "windo resize 6" | :winc p | endif
-autocmd FocusLost,InsertLeave,BufLeave * :wa
 
 
-autocmd VimEnter,BufRead,BufNewFile *.asd set filetype=lisp
-
-autocmd VimEnter,BufRead,BufNewFile *.php set filetype=php
-
-autocmd VimEnter,BufRead,BufNewFile,WinEnter *.qt set filetype=quicktask
-
-autocmd BufEnter * :hi Folded guibg=grey guifg=blue
-
-autocmd BufEnter NERD_tree_2 :vertical resize 32
 autocmd WinLeave * if @% == 'REPL' |
      \ :resize 6 | endif
 
@@ -79,25 +35,9 @@ autocmd WinEnter * if @% == 'REPL' |
 ""autocmd BufLeave * if @% == 'REPL' || @% == 'Shell One' |
 """      \ :resize 6 | endif
 
-" Remember info about open buffers on close
-set viminfo^=%
-
 " -----------------------------------------------------------------------------
 " INDENTATION AND TEXT-WRAP
 " -----------------------------------------------------------------------------
-
-set expandtab                   " Expand tabs to spaces
-set autoindent smartindent      " auto/smart indent
-set copyindent                  " copy previous indentation on auto indent
-set smarttab                    " At start of line, <Tab> inserts shift width spaces, <Bs> deletes shift width spaces.
-set expandtab softtabstop=4 shiftwidth=4
-
-set wrap                        " wrap lines
-set textwidth=120
-
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
 
 set pastetoggle=<F2>
 
@@ -186,240 +126,6 @@ nnoremap <leader>HA :Hgannotate<CR>
 
 " RipGrep
 nnoremap <Space><Space><Space> :Rg
-
-" see terminal edge
-if (exists('+colorcolumn'))
-  set colorcolumn=80
-  highlight ColorColumn ctermbg=9
-endif
-
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
-endif
-
-" == Plugins ==
-"
-filetype off
-
-syntax off
-
-call plug#begin('~/.config/nvim/plugged')
-
-""""""""""""""
-"  DEFAULTS  "
-""""""""""""""
-Plug 'https://github.com/tpope/vim-sensible.git'
-Plug 'xolox/vim-misc'
-Plug 'vim-scripts/a.vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'tpope/vim-classpath'
-Plug 'tpope/vim-dispatch'
-Plug 'mhinz/vim-signify'
-
-""""""""""""
-"  MIRRIR  "
-""""""""""""
-Plug 'zenbro/mirror.vim'
-
-"""""""""
-"  PHP  "
-"""""""""
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'Rican7/php-doc-modded'
-Plug 'adoy/vim-php-refactoring-toolbox'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
-Plug 'rayburgemeestre/phpfolding.vim'
-Plug 'phpmd/phpmd'
-
-""""""""""""""
-"  DEOPLETE  "
-""""""""""""""
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-zsh'
-Plug 'kristijanhusak/deoplete-phpactor'
-Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
-Plug 'zchee/deoplete-clang'
-
-"""""""""
-"  LSP  "
-"""""""""
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
-
-""""""""
-"  JS  "
-""""""""
-Plug 'jelera/vim-javascript-syntax'
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-
-""""""""""
-"  HTML  "
-""""""""""
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
-Plug 'mattn/emmet-vim'
-
-""""""""""
-"  MAKE  "
-""""""""""
-Plug 'neomake/neomake'
-
-"""""""""""""
-"  PROJECT  "
-"""""""""""""
-Plug 'mhinz/vim-startify'
-
-"""""""""""""""
-"  SAVE UNDO  "
-"""""""""""""""
-Plug 'bfredl/nvim-miniyank'
-Plug 'sjl/gundo.vim'
-
-"""""""""""
-"  NOTES  "
-"""""""""""
-Plug 'fmoralesc/vim-pad'
-Plug 'aaronbieber/vim-quicktask'
-Plug 'vimoutliner/vimoutliner'
-
-""""""""""""
-"  THEMES  "
-""""""""""""
-Plug 'altercation/vim-colors-solarized'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'flazz/vim-colorschemes'
-Plug 'altercation/vim-colors-solarized'
-
-""""""""""
-"  NERD  "
-""""""""""
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'f4t-t0ny/nerdtree-hg-plugin'
-Plug 'scrooloose/syntastic'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-Plug 'vim-scripts/a.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'Raimondi/delimitMate'
-"""""""""""""
-"  BUFFERS  "
-"""""""""""""
-Plug 'moll/vim-bbye'
-Plug 'vim-scripts/BufOnly.vim'
-
-""""""""""
-"  TAGS  "
-""""""""""
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'vim-scripts/taglist.vim'
-Plug 'majutsushi/tagbar'
-
-"""""""""
-"  GIT  "
-"""""""""
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'jreybert/vimagit'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Shougo/unite.vim'
-"""""""""""""""
-"  MERCURIAL  "
-"""""""""""""""
-Plug 'ludovicchabant/vim-lawrencium'
-Plug 'jlfwong/vim-mercenary'
-
-""""""""""
-"  LISP  "
-""""""""""
-Plug 'kovisoft/slimv'
-Plug 'tpope/vim-classpath'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-
-""""""""""""
-"  SYNTAX  "
-""""""""""""
-Plug 'scrooloose/syntastic'
-Plug 'Raimondi/delimitMate'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
-
-""""""""""""""
-"  SNIPPETS  "
-""""""""""""""
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-""""""""""
-"  JSON  "
-""""""""""
-
-"""""""""
-"  XML  "
-"""""""""
-Plug 'sukima/xmledit'
-Plug 'aaronbieber/vim-quicktask'
-Plug 'rayburgemeestre/phpfolding.vim'
-""""""""""""
-"  SEARCH  "
-""""""""""""
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'wesleyche/SrcExpl'
-Plug 'easymotion/vim-easymotion'
-Plug 'brooth/far.vim'
-Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-
-""""""""""""
-"  PYTHON  "
-""""""""""""
-Plug 'python-mode/python-mode'
-
-Plug 'joonty/vdebug'
-Plug 'tobyS/pdv'
-Plug 'tobyS/vmustache'
-Plug 'phpmd/phpmd'
-Plug 'tpope/vim-dispatch'
-Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-Plug 'mhinz/vim-signify'
-Plug 'janko-m/vim-test'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'brooth/far.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'vimoutliner/vimoutliner'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-Plug 'vim-scripts/taglist.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-scripts/BufOnly.vim'
-Plug 'ludovicchabant/vim-lawrencium'
-Plug 'jremmen/vim-ripgrep'
-Plug 'christoomey/vim-tmux-navigator'
-
-" C
-Plug 'vim-scripts/c.vim'
-Plug 'vim-scripts/Conque-GDB'
-
-call plug#end()
-
-filetype indent plugin on
-
-syntax on
 
 " TagList
 let Tlist_Use_Right_Window = 1
