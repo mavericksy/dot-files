@@ -1,0 +1,234 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+-	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap - dd k P$/;"	m	language:Vim
+/	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap \/ \/\\v$/;"	m	language:Vim
+/	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^vnoremap \/ \/\\v$/;"	m	language:Vim
+;	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap ; :$/;"	m	language:Vim
+<C-h>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <C-h> <C-w>h$/;"	m	language:Vim
+<C-I>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <C-I> :bprev<CR>$/;"	m	language:Vim
+<C-j>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <C-j> <C-w>j$/;"	m	language:Vim
+<C-k>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <C-k> <C-w>k$/;"	m	language:Vim
+<C-l>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <C-l> <C-w>l$/;"	m	language:Vim
+<C-O>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <C-O> :bnext<CR>$/;"	m	language:Vim
+<C-p>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <C-p> :FZF<CR>$/;"	m	language:Vim
+<c-u>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <c-u> <esc>viwUi$/;"	m	language:Vim
+<c-u>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <c-u> viwU$/;"	m	language:Vim
+<down>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <down> <nop>$/;"	m	language:Vim
+<esc>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <esc> <nop>$/;"	m	language:Vim
+<F1>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap! <F1> <Esc>$/;"	m	language:Vim
+<F4>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <F4> :GundoToggle<CR>$/;"	m	language:Vim
+<F7>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^map <F7> :UltiSnipsEdit<CR>$/;"	m	language:Vim
+<leader>;	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>; ;$/;"	m	language:Vim
+<leader><space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader><space> :noh<cr>$/;"	m	language:Vim
+<leader>bb	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>bb :buffers<cr>:buffer<Space>$/;"	m	language:Vim
+<leader>dk	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>dk :call pdv#DocumentWithSnip()<CR>$/;"	m	language:Vim
+<leader>ep	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>ep :e \/etc\/php.ini<CR>$/;"	m	language:Vim
+<leader>et	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>et :e ~\/.tmux.conf$/;"	m	language:Vim
+<leader>ev	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>ev :e $MYVIMRC<CR>$/;"	m	language:Vim
+<leader>fd	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent><leader>fd :call PhpCsFixerFixDirectory()<CR>$/;"	m	language:Vim
+<leader>ff	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent><leader>ff :call PhpCsFixerFixFile()<CR>$/;"	m	language:Vim
+<leader>gb	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>gb :ls<CR>:b<Space>$/;"	m	language:Vim
+<leader>HA	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>HA :Hgannotate<CR>$/;"	m	language:Vim
+<leader>HC	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>HC :Hgcommit<CR>$/;"	m	language:Vim
+<leader>HL	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>HL :Hglog<CR>$/;"	m	language:Vim
+<leader>HS	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>HS :Hgstatus<CR>$/;"	m	language:Vim
+<leader>HT	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>HT :Hglogthis<CR>$/;"	m	language:Vim
+<leader>lk	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>lk :%s\/\\s+$\/\/<CR>:let @\/=''<CR>$/;"	m	language:Vim
+<leader>mp	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>mp :MirrorPush<CR>$/;"	m	language:Vim
+<leader>nt	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <leader>nt :NERDTreeToggle<CR>$/;"	m	language:Vim
+<Leader>pC	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pC :call phpactor#ClassNew()<CR>$/;"	m	language:Vim
+<Leader>pE	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^vmap <silent><Leader>pE :<C-U>call phpactor#ExtractMethod()<CR>$/;"	m	language:Vim
+<Leader>pG	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pG :call phpactor#GotoDefinition()<CR>$/;"	m	language:Vim
+<Leader>pM	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pM :call phpactor#ContextMenu()<CR>$/;"	m	language:Vim
+<Leader>pN	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pN :call phpactor#Navigate()<CR>$/;"	m	language:Vim
+<Leader>pT	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pT :call phpactor#Transform()<CR>$/;"	m	language:Vim
+<Leader>pU	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <Leader>pU :call phpactor#UseAdd()<CR>$/;"	m	language:Vim
+<Leader>q	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <Leader>q :Bdelete<CR>$/;"	m	language:Vim
+<leader>rap	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rap :call PHPModify("add_missing_properties")<cr>$/;"	m	language:Vim
+<leader>rcc	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rcc :call phpactor#CopyFile()<cr>$/;"	m	language:Vim
+<leader>rei	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rei :call phpactor#ClassInflect()<cr>$/;"	m	language:Vim
+<leader>rfc	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>$/;"	m	language:Vim
+<leader>ric	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>ric :call PHPModify("implement_contracts")<cr>$/;"	m	language:Vim
+<leader>rmc	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rmc :call phpactor#MoveFile()<cr>$/;"	m	language:Vim
+<leader>rmd	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>rmd :call phpactor#FindReferences()<cr>$/;"	m	language:Vim
+<leader>s<space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>s<space> <Plug>(unite_restart)$/;"	m	language:Vim
+<leader>sp	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>sp :! sudo systemctl restart httpd<CR>$/;"	m	language:Vim
+<leader>src	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>src :call phpactor#FindReferences()<cr>$/;"	m	language:Vim
+<leader>sv	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>sv :so $MYVIMRC<CR>$/;"	m	language:Vim
+<Leader>sx	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <Leader>sx :SrcExplToggle<CR>$/;"	m	language:Vim
+<leader>tF	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <silent> <leader>tF :TestFile<CR>$/;"	m	language:Vim
+<leader>tL	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <silent> <leader>tL :TestLast<CR>$/;"	m	language:Vim
+<leader>tN	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <silent> <leader>tN :TestNearest<CR>$/;"	m	language:Vim
+<leader>tS	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <silent> <leader>tS :TestSuite<CR>$/;"	m	language:Vim
+<leader>tV	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nmap <silent> <leader>tV :TestVisit<CR>$/;"	m	language:Vim
+<leader>us	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>us :split<cr> :<C-u>Unite -start-insert file_rec\/async<cr>$/;"	m	language:Vim
+<Leader>v	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <Leader>v :NERDTreeFind<CR>$/;"	m	language:Vim
+<leader>]	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^map <leader>] :call phpactor#GotoDefinition()<CR>$/;"	m	language:Vim
+<left>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <left> <nop>$/;"	m	language:Vim
+<return>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>$/;"	m	language:Vim
+<right>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <right> <nop>$/;"	m	language:Vim
+<s-tab>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <expr><s-tab> pumvisible() ? "\\<C-p>" : "\\<TAB>"$/;"	m	language:Vim
+<Space><Space><Space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <Space><Space><Space> :Rg$/;"	m	language:Vim
+<tab>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <expr><tab> pumvisible() ? "\\<c-n>" : "\\<tab>"$/;"	m	language:Vim
+<tab>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap <expr><tab> pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
+<up>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <up> <nop>$/;"	m	language:Vim
+b:deoplete_disable_auto_complete	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let b:deoplete_disable_auto_complete=1$/;"	v	language:Vim
+Bs	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^command! -nargs=1 Bs :call BufSel("<args>")$/;"	c	language:Vim
+BufSel	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! BufSel(pattern)$/;"	f	language:Vim
+DefaultWorkspace	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^command! -register DefaultWorkspace call DefaultWorkspace()$/;"	c	language:Vim
+DefaultWorkspace	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! DefaultWorkspace()$/;"	f	language:Vim
+DeleteTrailingWS	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^func! DeleteTrailingWS()$/;"	f	language:Vim
+deoplete#sources#jedi#show_docstring	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let deoplete#sources#jedi#show_docstring = 1$/;"	v	language:Vim
+g:airline#extensions#tabline#enabled	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v	language:Vim
+g:airline#extensions#tabline#formatter	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v	language:Vim
+g:airline_highlighting_cache	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline_highlighting_cache = 1$/;"	v	language:Vim
+g:airline_powerline_fonts	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline_powerline_fonts = 1$/;"	v	language:Vim
+g:airline_theme	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:airline_theme='hybrid'$/;"	v	language:Vim
+g:auto_save	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:auto_save = 1$/;"	v	language:Vim
+g:auto_save_silent	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:auto_save_silent = 1$/;"	v	language:Vim
+g:deoplete#auto_complete_delay	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#auto_complete_delay= 75$/;"	v	language:Vim
+g:deoplete#auto_complete_start_length	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#auto_complete_start_length = 1$/;"	v	language:Vim
+g:deoplete#auto_refresh_delay	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#auto_refresh_delay= 5$/;"	v	language:Vim
+g:deoplete#enable_at_startup	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v	language:Vim
+g:deoplete#enable_at_startup	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v	language:Vim
+g:deoplete#enable_camel_case	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#enable_camel_case = 1$/;"	v	language:Vim
+g:deoplete#enable_refresh_always	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#enable_refresh_always = 1$/;"	v	language:Vim
+g:deoplete#enable_smart_case	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#enable_smart_case = 1$/;"	v	language:Vim
+g:deoplete#ignore_sources	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#ignore_sources.php = ['omni']$/;"	v	language:Vim
+g:deoplete#omni#input_patterns	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^        let g:deoplete#omni#input_patterns = {}$/;"	v	language:Vim
+g:deoplete#skip_chars	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#skip_chars = ['$']$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#sources = {}$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#sources._=['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']$/;"	v	language:Vim
+g:deoplete#sources#padawan#add_parentheses	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:deoplete#sources#padawan#add_parentheses = 1$/;"	v	language:Vim
+g:easytags_async	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:easytags_async = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:easytags_dynamic_files = 2$/;"	v	language:Vim
+g:easytags_events	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:easytags_events = ['BufReadPost', 'BufWritePost']$/;"	v	language:Vim
+g:easytags_resolve_links	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:easytags_suppress_ctags_warning	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:easytags_suppress_ctags_warning = 1$/;"	v	language:Vim
+g:gundo_auto_preview	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:gundo_auto_preview=1$/;"	v	language:Vim
+g:gundo_playback_delay	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:gundo_playback_delay=180$/;"	v	language:Vim
+g:hybrid_custom_term_colors	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:hybrid_custom_term_colors = 1$/;"	v	language:Vim
+g:hybrid_reduced_contrast	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:hybrid_reduced_contrast = 1$/;"	v	language:Vim
+g:indent_guides_enable_on_vim_startup	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:indent_guides_enable_on_vim_startup = 1$/;"	v	language:Vim
+g:LanguageClient_diagnosticsEnable	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:LanguageClient_diagnosticsEnable  = 0$/;"	v	language:Vim
+g:LanguageClient_signColumnAlwaysOn	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:LanguageClient_signColumnAlwaysOn = 0$/;"	v	language:Vim
+g:neomake_error_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}$/;"	v	language:Vim
+g:neomake_info_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}$/;"	v	language:Vim
+g:neomake_message_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}$/;"	v	language:Vim
+g:neomake_php_enabled_makers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']$/;"	v	language:Vim
+g:neomake_php_phpcs_args_standard	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_phpcs_args_standard = 'PSR2'$/;"	v	language:Vim
+g:neomake_php_phpcs_maker	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_phpcs_maker = {$/;"	v	language:Vim
+g:neomake_php_php_maker	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_php_maker = {$/;"	v	language:Vim
+g:neomake_warning_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}$/;"	v	language:Vim
+g:NERDAltDelims_java	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDAltDelims_java = 1$/;"	v	language:Vim
+g:NERDCommentEmptyLines	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDCommentEmptyLines = 1$/;"	v	language:Vim
+g:NERDCompactSexyComs	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDCompactSexyComs = 1$/;"	v	language:Vim
+g:NERDCustomDelimiters	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDCustomDelimiters = { 'c': { 'left': '\/**','right': '*\/' } }$/;"	v	language:Vim
+g:NERDDefaultAlign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDDefaultAlign = 'left'$/;"	v	language:Vim
+g:NERDRemoveExtraSpaces	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDRemoveExtraSpaces=1$/;"	v	language:Vim
+g:NERDSpaceDelims	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDSpaceDelims = 1$/;"	v	language:Vim
+g:NERDTreeAutoDeleteBuffer	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeAutoDeleteBuffer = 1$/;"	v	language:Vim
+g:NERDTreeCascadeOpenSingleChildDir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeCascadeOpenSingleChildDir = 1$/;"	v	language:Vim
+g:NERDTreeChDirMode	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeChDirMode = 2$/;"	v	language:Vim
+g:NERDTreeHijackNetrw	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeHijackNetrw = 1$/;"	v	language:Vim
+g:NERDTreeIndicatorMapCustom	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeIndicatorMapCustom = {$/;"	v	language:Vim
+g:NERDTreeShowBookmarks	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeShowBookmarks = 0$/;"	v	language:Vim
+g:NERDTreeShowHidden	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeShowHidden=1$/;"	v	language:Vim
+g:NERDTreeWinSize	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeWinSize = 38$/;"	v	language:Vim
+g:NERDTreeWinSize	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTreeWinSize=28$/;"	v	language:Vim
+g:nerdtree_tabs_open_on_console_startup	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nerdtree_tabs_open_on_console_startup = 0$/;"	v	language:Vim
+g:NERDTrimTrailingWhitespace	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v	language:Vim
+g:nvimux_new_window_buffer	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_new_window_buffer = 'single'$/;"	v	language:Vim
+g:nvimux_open_term_by_default	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_open_term_by_default = 'true'$/;"	v	language:Vim
+g:nvimux_prefix	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_prefix = '<C-a>'$/;"	v	language:Vim
+g:nvimux_quickterm_direction	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_quickterm_direction = 'botright'$/;"	v	language:Vim
+g:nvimux_quickterm_orientation	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_quickterm_orientation = 'vertical'$/;"	v	language:Vim
+g:nvimux_quickterm_scope	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_quickterm_scope = 't'$/;"	v	language:Vim
+g:nvimux_quickterm_size	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:nvimux_quickterm_size = '80'$/;"	v	language:Vim
+g:pad#dir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:pad#dir = '~\/.notes'$/;"	v	language:Vim
+g:pad#dir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:pad#dir="~\/Documents\/Notes"$/;"	v	language:Vim
+g:pdv_template_dir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:pdv_template_dir = $HOME ."\/.config\/nvim\/plugged\/pdv\/templates_snip"$/;"	v	language:Vim
+g:php_cs_fixer_config	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_config = "default"                  " options: --config$/;"	v	language:Vim
+g:php_cs_fixer_dry_run	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option$/;"	v	language:Vim
+g:php_cs_fixer_enable_default_mapping	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)$/;"	v	language:Vim
+g:php_cs_fixer_level	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_level = "symfony"                   " options: --level (default:symfony)$/;"	v	language:Vim
+g:php_cs_fixer_php_path	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_php_path = "php"               " Path to PHP$/;"	v	language:Vim
+g:php_cs_fixer_rules	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)$/;"	v	language:Vim
+g:php_cs_fixer_verbose	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:php_cs_fixer_verbose = 0$/;"	v	language:Vim
+g:pymode_lint_on_write	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:pymode_lint_on_write = 0$/;"	v	language:Vim
+g:quicktask_autosave	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:quicktask_autosave = 1$/;"	v	language:Vim
+g:slimv_impl	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_impl = 'sbcl'$/;"	v	language:Vim
+g:slimv_keybindings	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_keybindings = 2$/;"	v	language:Vim
+g:slimv_lisp	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_lisp = '\/usr\/bin\/sbcl'$/;"	v	language:Vim
+g:slimv_repl_simple_eval	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_repl_simple_eval = 1$/;"	v	language:Vim
+g:slimv_repl_split	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_repl_split = 2$/;"	v	language:Vim
+g:slimv_swank_cmd	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_swank_cmd = '! sbcl --load \/home\/sumosudo\/.config\/nvim\/plugged\/slimv\/slime\/start-swank.lisp'$/;"	v	language:Vim
+g:slimv_swank_cmd	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:slimv_swank_cmd = '! sbcl --load ~\/.config\/nvim\/plugged\/slimv\/slime\/start-swank.lisp'$/;"	v	language:Vim
+g:snips_author	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:snips_author = 'Shaun Pearce <shaun@datatill.com>'$/;"	v	language:Vim
+g:SrcExpl_isUpdateTags	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:SrcExpl_isUpdateTags = 0$/;"	v	language:Vim
+g:SrcExpl_refreshTime	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:SrcExpl_refreshTime = 500$/;"	v	language:Vim
+g:SrcExpl_updateTagsKey	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:SrcExpl_updateTagsKey = "<F12>"$/;"	v	language:Vim
+g:startify_session_dir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:startify_session_dir = '~\/.config\/nvim\/session'$/;"	v	language:Vim
+g:syntastic_aggregate_errors	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_aggregate_errors = 1$/;"	v	language:Vim
+g:syntastic_always_populate_loc_list	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v	language:Vim
+g:syntastic_auto_loc_list	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v	language:Vim
+g:syntastic_check_on_open	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_check_on_open = 1$/;"	v	language:Vim
+g:syntastic_check_on_wq	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v	language:Vim
+g:syntastic_mode_map	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_mode_map = {$/;"	v	language:Vim
+g:syntastic_php_checkers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']$/;"	v	language:Vim
+g:syntastic_quiet_messages	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_quiet_messages = { "type": "style" }$/;"	v	language:Vim
+g:Tlist_Use_Right_Window	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:Tlist_Use_Right_Window = 1$/;"	v	language:Vim
+g:Tlist_WinWidth	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:Tlist_WinWidth = 45$/;"	v	language:Vim
+g:UltiSnipsEditSplit	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v	language:Vim
+g:UltiSnipsEditSplit	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsExpandTrigger="<c-t>"$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsExpandTrigger="aaa"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-j>"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger="www"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger="<c-k>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger="sss"$/;"	v	language:Vim
+g:UltiSnipsListSnippets	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsListSnippets = '<C-S-tab>'$/;"	v	language:Vim
+g:UltiSnipsSnippetDirectories	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsSnippetDirectories = ['\/home\/sumosudo\/.config\/nvim\/snips']$/;"	v	language:Vim
+g:UltiSnipsSnippetDirectories	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsSnippetDirectories=["UltiSnips"]$/;"	v	language:Vim
+g:UltiSnipsSnippetsDir	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:UltiSnipsSnippetsDir = $HOME.'\/.config\/nvim\/snips'$/;"	v	language:Vim
+g:ultisnips_php_scalar_types	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:ultisnips_php_scalar_types = 1$/;"	v	language:Vim
+g:ulti_expand_res	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:ulti_expand_res = 0$/;"	v	language:Vim
+g:unite_source_history_yank_enable	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:unite_source_history_yank_enable = 1$/;"	v	language:Vim
+g:unite_source_rec_async_command	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^  let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'$/;"	v	language:Vim
+g:vdebug_keymap	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vdebug_keymap = {$/;"	v	language:Vim
+g:vdebug_options	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vdebug_options = {}$/;"	v	language:Vim
+g:vdebug_options	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vdebug_options["port"] = 9000$/;"	v	language:Vim
+g:vim_php_refactoring_auto_validate_visibility	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vim_php_refactoring_auto_validate_visibility = 1$/;"	v	language:Vim
+g:vim_php_refactoring_default_method_visibility	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vim_php_refactoring_default_method_visibility = 'private'$/;"	v	language:Vim
+g:vim_php_refactoring_default_property_visibility	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vim_php_refactoring_default_property_visibility = 'private'$/;"	v	language:Vim
+g:vim_php_refactoring_phpdoc	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vim_php_refactoring_phpdoc = "pdv#DocumentCurrentLine"$/;"	v	language:Vim
+g:vim_php_refactoring_use_default_mapping	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:vim_php_refactoring_use_default_mapping = 0$/;"	v	language:Vim
+gd	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>$/;"	m	language:Vim
+gr	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>$/;"	m	language:Vim
+gY	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap gY gg"+yG$/;"	m	language:Vim
+gy	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^vnoremap gy "+y$/;"	m	language:Vim
+j	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap j gj$/;"	m	language:Vim
+jk	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap jk <esc>`^$/;"	m	language:Vim
+jkl;	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^inoremap jkl; <esc>:wq<cr>$/;"	m	language:Vim
+K	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap K :call LanguageClient_textDocument_hover()<cr>$/;"	m	language:Vim
+k	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap k gk$/;"	m	language:Vim
+mapleader	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let mapleader = ","$/;"	v	language:Vim
+maplocalleader	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let maplocalleader = "\\\\"$/;"	v	language:Vim
+mapMoveToWindowInDirection	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^func! s:mapMoveToWindowInDirection(direction)$/;"	f	language:Vim
+NERDRemoveExtraSpaces	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let NERDRemoveExtraSpaces=1$/;"	v	language:Vim
+NERDSpaceDelims	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let NERDSpaceDelims=1               " space around delimiters$/;"	v	language:Vim
+NERDTreeAutoDeleteBuffer	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let NERDTreeAutoDeleteBuffer = 1$/;"	v	language:Vim
+NERDTreeDirArrows	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let NERDTreeDirArrows = 1$/;"	v	language:Vim
+NERDTreeMinimalUI	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let NERDTreeMinimalUI = 1$/;"	v	language:Vim
+PHPExtractVariable	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! PHPExtractVariable()$/;"	f	language:Vim
+PHPModify	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! PHPModify(transformer)$/;"	f	language:Vim
+SetErrorType	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! SetErrorType(entry)$/;"	f	language:Vim
+SetMessageType	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! SetMessageType(entry)$/;"	f	language:Vim
+SetWarningType	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! SetWarningType(entry)$/;"	f	language:Vim
+test#project_root	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let test#project_root = "\/home\/sumosudo\/Projects\/MyECommerce\/playlottoinafrica\/application\/tests"$/;"	v	language:Vim
+test#strategy	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let test#strategy = 'asyncrun'$/;"	v	language:Vim
+test#strategy	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let test#strategy = 'dispatch'$/;"	v	language:Vim
+Tlist_Use_Right_Window	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let Tlist_Use_Right_Window = 1$/;"	v	language:Vim
+Tlist_WinWidth	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let Tlist_WinWidth = 20$/;"	v	language:Vim
+Ulti_ExpandOrEnter	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! Ulti_ExpandOrEnter()$/;"	f	language:Vim
+w!!	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^cnoremap w!! w !sudo tee % >\/dev\/null$/;"	m	language:Vim
