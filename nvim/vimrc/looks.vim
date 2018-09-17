@@ -8,7 +8,7 @@ set mat=2
 set winwidth=999
 set winheight=99
 set winminheight=5
-set winminwidth=6
+set winminwidth=3
 
 "makes sure Vim doesn't try to make all windows equal.
 set noequalalways

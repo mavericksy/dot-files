@@ -47,7 +47,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-zsh'
 Plug 'kristijanhusak/deoplete-phpactor'
-Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
+Plug 'padawan-php/deoplete-padawan', { 'do':'composer install', 'for': 'php' }
 Plug 'zchee/deoplete-clang'
 
 """""""""
