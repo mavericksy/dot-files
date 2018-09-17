@@ -53,8 +53,8 @@ Plug 'zchee/deoplete-clang'
 """""""""
 "  LSP  "
 """""""""
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
+"Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 """"""""
 "  JS  "
@@ -202,7 +202,7 @@ Plug 'neovim/python-client'
 Plug 'python-mode/python-mode'
 Plug 'joonty/vdebug'
 Plug 'tobyS/pdv'
-PLug 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'phpmd/phpmd'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
