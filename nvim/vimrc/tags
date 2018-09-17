@@ -1,1 +1,55 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<F7>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^map <F7> :UltiSnipsEdit<CR>$/;"	m	language:Vim
+<return>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>$/;"	m	language:Vim
+<s-tab>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^inoremap <expr><s-tab> pumvisible() ? "\\<C-p>" : "\\<TAB>"$/;"	m	language:Vim
+<tab>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^inoremap <expr><tab> pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
+deoplete#sources#jedi#show_docstring	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let deoplete#sources#jedi#show_docstring = 1$/;"	v	language:Vim
+g:deoplete#auto_complete_delay	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#auto_complete_delay= 75$/;"	v	language:Vim
+g:deoplete#auto_complete_start_length	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#auto_complete_start_length = 1$/;"	v	language:Vim
+g:deoplete#auto_refresh_delay	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#auto_refresh_delay= 5$/;"	v	language:Vim
+g:deoplete#enable_at_startup	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v	language:Vim
+g:deoplete#enable_camel_case	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_camel_case = 1$/;"	v	language:Vim
+g:deoplete#enable_camel_case	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_camel_case = 1$/;"	v	language:Vim
+g:deoplete#enable_ignore_case	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_ignore_case = 1$/;"	v	language:Vim
+g:deoplete#enable_refresh_always	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_refresh_always = 1$/;"	v	language:Vim
+g:deoplete#enable_refresh_always	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_refresh_always = 1$/;"	v	language:Vim
+g:deoplete#enable_smart_case	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_smart_case = 1$/;"	v	language:Vim
+g:deoplete#enable_smart_case	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#enable_smart_case = 1$/;"	v	language:Vim
+g:deoplete#max_abbr_width	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#max_abbr_width = 0$/;"	v	language:Vim
+g:deoplete#max_menu_width	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#max_menu_width = 0$/;"	v	language:Vim
+g:deoplete#omni#functions	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#omni#functions = {}$/;"	v	language:Vim
+g:deoplete#omni#functions	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#omni#functions.javascript = [$/;"	v	language:Vim
+g:deoplete#omni#input_patterns	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^        let g:deoplete#omni#input_patterns = {}$/;"	v	language:Vim
+g:deoplete#skip_chars	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#skip_chars = ['$']$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#sources = {}$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#sources['php'] = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']$/;"	v	language:Vim
+g:deoplete#sources	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#sources['_'] = ['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']$/;"	v	language:Vim
+g:deoplete#sources#padawan#add_parentheses	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:deoplete#sources#padawan#add_parentheses = 1$/;"	v	language:Vim
+g:javascript_conceal_arrow_function	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_arrow_function       = "⇒"$/;"	v	language:Vim
+g:javascript_conceal_function	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_function             = "ƒ"$/;"	v	language:Vim
+g:javascript_conceal_NaN	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_NaN                  = "ℕ"$/;"	v	language:Vim
+g:javascript_conceal_noarg_arrow_function	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_noarg_arrow_function = "🞅"$/;"	v	language:Vim
+g:javascript_conceal_null	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_null                 = "ø"$/;"	v	language:Vim
+g:javascript_conceal_prototype	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_prototype            = "¶"$/;"	v	language:Vim
+g:javascript_conceal_return	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_return               = "⇚"$/;"	v	language:Vim
+g:javascript_conceal_static	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_static               = "•"$/;"	v	language:Vim
+g:javascript_conceal_super	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_super                = "Ω"$/;"	v	language:Vim
+g:javascript_conceal_this	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_this                 = "@"$/;"	v	language:Vim
+g:javascript_conceal_undefined	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_undefined            = "¿"$/;"	v	language:Vim
+g:javascript_conceal_underscore_arrow_function	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_underscore_arrow_function = "🞅"$/;"	v	language:Vim
+g:snips_author	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:snips_author = 'Shaun Pearce <shaun@datatill.com>'$/;"	v	language:Vim
+g:tern#arguments	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern#arguments = ['--persistent']$/;"	v	language:Vim
+g:tern#command	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern#command = ['tern']$/;"	v	language:Vim
+g:tern_request_timeout	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern_request_timeout = 1$/;"	v	language:Vim
+g:tern_request_timeout	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern_request_timeout = 6000$/;"	v	language:Vim
+g:UltiSnipsEditSplit	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsExpandTrigger="<c-t>"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-j>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsJumpForwardTrigger="<c-k>"$/;"	v	language:Vim
+g:UltiSnipsListSnippets	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsListSnippets = '<C-S-tab>'$/;"	v	language:Vim
+g:UltiSnipsSnippetDirectories	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsSnippetDirectories = ['\/home\/sumosudo\/.config\/nvim\/snips']$/;"	v	language:Vim
+g:UltiSnipsSnippetsDir	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsSnippetsDir = $HOME.'\/.config\/nvim\/snips'$/;"	v	language:Vim
+g:ultisnips_php_scalar_types	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:ultisnips_php_scalar_types = 1$/;"	v	language:Vim
+g:ulti_expand_res	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:ulti_expand_res = 0$/;"	v	language:Vim
+Ulti_ExpandOrEnter	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^function! Ulti_ExpandOrEnter()$/;"	f	language:Vim

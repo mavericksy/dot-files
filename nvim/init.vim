@@ -131,9 +131,6 @@ nnoremap <Space><Space><Space> :Rg
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 20
 
-" PHPCD
-"let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   VIM-PAD                                    "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -171,8 +168,8 @@ let g:vdebug_keymap = {
 \}
 
 " redefine the characters
-autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=DbgBreakptLine
-autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
+"autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=DbgBreakptLine
+"autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
 
 " map the project when used in a vagrant / vm | vm path : host past
 " let g:vdebug_options["path_maps"] = {}
@@ -447,36 +444,6 @@ let g:quicktask_autosave = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set completeopt=longest,menuone,preview
 
-let g:deoplete#sources#padawan#add_parentheses = 1
-" needed for echodoc to work if add_parentheses is 1
-let g:deoplete#skip_chars = ['$']
-
-let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
-
-let g:deoplete#sources = {}
-let g:deoplete#sources._=['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']
-
-" disable autocomplete by default
-let b:deoplete_disable_auto_complete=1
-call deoplete#custom#buffer_option('auto_complete', v:false)
-
-if !exists('g:deoplete#omni#input_patterns')
-        let g:deoplete#omni#input_patterns = {}
-endif
-
-let g:deoplete#auto_complete_delay= 75
-let g:deoplete#auto_refresh_delay= 5
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-let deoplete#sources#jedi#show_docstring = 1
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " vim-test
 "
 let test#strategy = 'asyncrun'
@@ -501,45 +468,6 @@ let g:nvimux_quickterm_size = '80'
 
 let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"
 nnoremap <leader>dk :call pdv#DocumentWithSnip()<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  UltiSnips                                   "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:snips_author = 'Shaun Pearce <shaun@datatill.com>'
-let g:ultisnips_php_scalar_types = 1
-let g:UltiSnipsExpandTrigger="<c-t>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
-
-inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/snips'
-let g:UltiSnipsSnippetDirectories = ['/home/sumosudo/.config/nvim/snips']
-
-map <F7> :UltiSnipsEdit<CR>
-
-let g:UltiSnipsListSnippets = '<C-S-tab>'
-let g:ulti_expand_res = 0
-
-function! Ulti_ExpandOrEnter()
-        " First try to expand a snippet
-        call UltiSnips#ExpandSnippet()
-        if g:ulti_expand_res
-                " if successful, just return
-                return ''
-        elseif pumvisible()
-                " if in completion menu - just close it and leave the cursor at the
-                " end of the completion
-                return deoplete#mappings#close_popup()
-        else
-                " otherwise, just do an "enter"
-                return "\<return>"
-        endif
-endfunction
-inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
-
 
 " == Airline
 "
