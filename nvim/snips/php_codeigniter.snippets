@@ -277,3 +277,18 @@ return (${1:$this->variable})
 			'name' => ${5:'VALUE'}
 	]);
 endsnippet
+
+snippet log_debug_message "log_message('debug', MESSAGE)" bi
+log_message('debug', '${1:MESSAGE}');
+endsnippet
+
+snippet log_benchmark_message_start "microtime" bi
+$here_date = round(microtime(true) * 1000);
+log_message("debug", "[${1:DESCRIPTION}] here: $here_date ${2:STUFF}");
+endsnippet
+
+snippet log_benchmark_message_end "microtime" bi
+$there_date = round(microtime(true) * 1000);
+$spent = $there_date - $here_date;
+log_message("debug", "[${1:DESCRIPTION}] there: $there_date ${2:STUFF} SPENT: $spent");
+endsnippet

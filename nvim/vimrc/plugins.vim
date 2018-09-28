@@ -39,6 +39,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'phpmd/phpmd'
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 """"""""""""""
 "  DEOPLETE  "
@@ -60,7 +61,6 @@ Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer ru
 "  JS  "
 """"""""
 Plug 'pangloss/vim-javascript'
-Plug 'w0rp/ale'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
@@ -114,7 +114,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'f4t-t0ny/nerdtree-hg-plugin'
-Plug 'scrooloose/syntastic'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'vim-scripts/a.vim'
@@ -130,10 +129,7 @@ Plug 'vim-scripts/BufOnly.vim'
 "  TAGS  "
 """"""""""
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'vim-scripts/taglist.vim'
 Plug 'majutsushi/tagbar'
-
-
 
 """""""""
 "  GIT  "
@@ -203,7 +199,6 @@ Plug 'python-mode/python-mode'
 Plug 'joonty/vdebug'
 Plug 'tobyS/pdv'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'phpmd/phpmd'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'mhinz/vim-signify'
@@ -212,15 +207,15 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'brooth/far.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vimoutliner/vimoutliner'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-Plug 'vim-scripts/taglist.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'ludovicchabant/vim-lawrencium'
 Plug 'jremmen/vim-ripgrep'
 Plug 'christoomey/vim-tmux-navigator'
 
-" C
+"""""""
+"  C  "
+"""""""
 Plug 'vim-scripts/c.vim'
 Plug 'vim-scripts/Conque-GDB'
 

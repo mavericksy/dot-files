@@ -4,12 +4,10 @@ autocmd BufEnter NERD_tree_2 :vertical resize 32
 
 autocmd BufEnter __Tagbar__.1 :vertical resize 28
 
-"
-" JAVASCRIPT
-"
-"
-" vim-javascript
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                    VIM-JAVSCRIPT                                                     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
@@ -26,7 +24,10 @@ let g:javascript_conceal_underscore_arrow_function = "🞅"
 " prettier JS
 autocmd FileType javascript set formatprg=prettier\ --stdin
 
-"" DEOPLETE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                       DEOPLETE                                                       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
@@ -43,7 +44,7 @@ let g:deoplete#omni#functions.javascript = [
   \ 'jspc#omni'
 \]
 
-let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
+let g:deoplete#sources.javascript = ['file', 'ultisnips', 'ternjs']
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
 let g:tern_request_timeout = 1
@@ -54,8 +55,10 @@ let g:deoplete#sources#padawan#add_parentheses = 1
 " needed for echodoc to work if add_parentheses is 1
 let g:deoplete#skip_chars = ['$']
 
-let g:deoplete#sources['php'] = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
-let g:deoplete#sources['_'] = ['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
+let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
+let g:deoplete#sources._ = ['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']
 
 if !exists('g:deoplete#omni#input_patterns')
         let g:deoplete#omni#input_patterns = {}
@@ -110,4 +113,8 @@ function! Ulti_ExpandOrEnter()
         endif
 endfunction
 inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                       V-DEBUG"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

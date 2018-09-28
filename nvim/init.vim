@@ -125,7 +125,15 @@ nnoremap <leader>HT :Hglogthis<CR>
 nnoremap <leader>HA :Hgannotate<CR>
 
 " RipGrep
-nnoremap <Space><Space><Space> :Rg
+nnoremap <Space><Space><Space> :Rg<space>
+nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
+
+autocmd VimEnter * command! -nargs=* Rg
+            \ call fzf#vim#grep(
+            \ 'rg --column --line-number --no-heading --fixed-strigs --ignore-case 
+            \ --no-ignore --hidden --follow --glob "!.hg/*" --color "always" 
+            \ '.shellescape(<q-args),1,<bang>0 fzf#vim#with_preview('up:60%') 
+            \ : fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0)
 
 " TagList
 let Tlist_Use_Right_Window = 1
@@ -161,15 +169,15 @@ let g:vdebug_keymap = {
 \    "step_out" : "<F4>",
 \    "close" : "<F6>",
 \    "detach" : "<F7>",
-\    "set_breakpoint" : "<F10>",
+\    "set_breakpoint" : "<leader>BB",
 \    "get_context" : "<F11>",
 \    "eval_under_cursor" : "<F12>",
 \    "eval_visual" : "<F8>",
 \}
 
 " redefine the characters
-"autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=DbgBreakptLine
-"autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
+autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=DbgBreakptLine
+autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
 
 " map the project when used in a vagrant / vm | vm path : host past
 " let g:vdebug_options["path_maps"] = {}
@@ -318,7 +326,7 @@ nnoremap <Leader>sx :SrcExplToggle<CR>
 "                                   NEOMAKE                                    "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd BufWritePost * Neomake
+"autocmd BufWritePost * Neomake
 let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
 let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
@@ -340,7 +348,9 @@ function! SetMessageType(entry)
   let a:entry.type = 'M'
 endfunction
 
-let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+" phpcs include
+"let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+let g:neomake_php_enabled_makers = ['php']
 
 let g:neomake_php_php_maker = {
         \ 'args': ['-l', '-d', 'display_errors=1', '-d', 'log_errors=0',
@@ -577,9 +587,12 @@ set statusline+=%{strftime(\"%m/%d/%y\ %H:%M\")}
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_signs=1
+let g:syntastic_echo_current_error=1
 
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers = ['php']
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_quiet_messages = { "type": "style" }
 let g:syntastic_mode_map = {

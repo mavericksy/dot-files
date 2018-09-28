@@ -18,6 +18,7 @@
 <F4>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <F4> :GundoToggle<CR>$/;"	m	language:Vim
 <leader>;	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>; ;$/;"	m	language:Vim
 <leader><space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader><space> :noh<cr>$/;"	m	language:Vim
+<leader>A	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>$/;"	m	language:Vim
 <leader>bb	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>bb :buffers<cr>:buffer<Space>$/;"	m	language:Vim
 <leader>dk	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <leader>dk :call pdv#DocumentWithSnip()<CR>$/;"	m	language:Vim
 <leader>ep	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <silent> <leader>ep :e \/etc\/php.ini<CR>$/;"	m	language:Vim
@@ -64,7 +65,7 @@
 <leader>]	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^map <leader>] :call phpactor#GotoDefinition()<CR>$/;"	m	language:Vim
 <left>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <left> <nop>$/;"	m	language:Vim
 <right>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <right> <nop>$/;"	m	language:Vim
-<Space><Space><Space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <Space><Space><Space> :Rg$/;"	m	language:Vim
+<Space><Space><Space>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^nnoremap <Space><Space><Space> :Rg<space>$/;"	m	language:Vim
 <up>	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^noremap <up> <nop>$/;"	m	language:Vim
 Bs	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^command! -nargs=1 Bs :call BufSel("<args>")$/;"	c	language:Vim
 BufSel	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^function! BufSel(pattern)$/;"	f	language:Vim
@@ -92,7 +93,7 @@ g:LanguageClient_signColumnAlwaysOn	/home/sumosudo/Projects/dot-files/nvim/init.
 g:neomake_error_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}$/;"	v	language:Vim
 g:neomake_info_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}$/;"	v	language:Vim
 g:neomake_message_sign	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}$/;"	v	language:Vim
-g:neomake_php_enabled_makers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']$/;"	v	language:Vim
+g:neomake_php_enabled_makers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_enabled_makers = ['php']$/;"	v	language:Vim
 g:neomake_php_phpcs_args_standard	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_phpcs_args_standard = 'PSR2'$/;"	v	language:Vim
 g:neomake_php_phpcs_maker	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_phpcs_maker = {$/;"	v	language:Vim
 g:neomake_php_php_maker	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:neomake_php_php_maker = {$/;"	v	language:Vim
@@ -149,9 +150,11 @@ g:syntastic_aggregate_errors	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^l
 g:syntastic_always_populate_loc_list	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v	language:Vim
 g:syntastic_auto_loc_list	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v	language:Vim
 g:syntastic_check_on_open	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_check_on_open = 1$/;"	v	language:Vim
-g:syntastic_check_on_wq	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v	language:Vim
+g:syntastic_check_on_wq	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_check_on_wq = 1$/;"	v	language:Vim
+g:syntastic_echo_current_error	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_echo_current_error=1$/;"	v	language:Vim
+g:syntastic_enable_signs	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_enable_signs=1$/;"	v	language:Vim
 g:syntastic_mode_map	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_mode_map = {$/;"	v	language:Vim
-g:syntastic_php_checkers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']$/;"	v	language:Vim
+g:syntastic_php_checkers	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_php_checkers = ['php']$/;"	v	language:Vim
 g:syntastic_quiet_messages	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:syntastic_quiet_messages = { "type": "style" }$/;"	v	language:Vim
 g:Tlist_Use_Right_Window	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:Tlist_Use_Right_Window = 1$/;"	v	language:Vim
 g:Tlist_WinWidth	/home/sumosudo/Projects/dot-files/nvim/init.vim	/^let g:Tlist_WinWidth = 45$/;"	v	language:Vim
