@@ -161,7 +161,7 @@ let g:vdebug_keymap = {
 \    "step_out" : "<F4>",
 \    "close" : "<F6>",
 \    "detach" : "<F7>",
-\    "set_breakpoint" : "<F10>",
+\    "set_breakpoint" : "<leader>bb",
 \    "get_context" : "<F11>",
 \    "eval_under_cursor" : "<F12>",
 \    "eval_visual" : "<F8>",
