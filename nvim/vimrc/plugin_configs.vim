@@ -55,7 +55,6 @@ let g:deoplete#sources#padawan#add_parentheses = 1
 " needed for echodoc to work if add_parentheses is 1
 let g:deoplete#skip_chars = ['$']
 
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
 let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
 let g:deoplete#sources._ = ['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']
@@ -64,7 +63,7 @@ if !exists('g:deoplete#omni#input_patterns')
         let g:deoplete#omni#input_patterns = {}
 endif
 
-let g:deoplete#auto_complete_delay= 75
+let g:deoplete#auto_complete_delay= 30
 let g:deoplete#auto_refresh_delay= 5
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#enable_camel_case = 1
@@ -72,7 +71,6 @@ let g:deoplete#enable_refresh_always = 1
 let g:deoplete#auto_complete_start_length = 1
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 let deoplete#sources#jedi#show_docstring = 1
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,4 +115,11 @@ inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                       V-DEBUG"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                     VIM-RIPGREP                                                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:rg_highlight=1
+let g:rg_root_types=['.git', '.hg']
+let g:rg_command="rg -g '!tags' --vimgrep"
 

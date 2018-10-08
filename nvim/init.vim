@@ -124,17 +124,6 @@ nnoremap <leader>HC :Hgcommit<CR>
 nnoremap <leader>HT :Hglogthis<CR>
 nnoremap <leader>HA :Hgannotate<CR>
 
-" RipGrep
-nnoremap <Space><Space><Space> :Rg<space>
-nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
-
-autocmd VimEnter * command! -nargs=* Rg
-            \ call fzf#vim#grep(
-            \ 'rg --column --line-number --no-heading --fixed-strigs --ignore-case 
-            \ --no-ignore --hidden --follow --glob "!.hg/*" --color "always" 
-            \ '.shellescape(<q-args),1,<bang>0 fzf#vim#with_preview('up:60%') 
-            \ : fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0)
-
 " TagList
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 20

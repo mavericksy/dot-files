@@ -7,6 +7,10 @@ snippet log_debug "log_message('DEBUG', ??)" b
 log_message('debug', ${1:'DEBUG'});
 endsnippet
 
+snippet log_debug_last_query "log_message" bi
+log_message('debug', '[${1:DESCRIPTION}] '.__FILE__.' '.__LINE__.' '.__FUNCTION__.'QUERY:'.${2:$this->db->last_query()});
+endsnippet
+
 ################################################################################
 #                                     $this                                    #
 ################################################################################
