@@ -93,6 +93,7 @@ alias sbcl='rlwrap sbcl --noinform'
 alias sbcl-swank='sbcl --load ~/.config/nvim/plugged/slimv/slime/start-swank.lisp'
 alias firedev='. /home/sumosudo/repositories/firefox-dev-edition/firefox'
 alias boost-nvim='sudo renice -16 `ps -aux|grep nvim$|cut -d" " -f2`'
+alias python='python3.6'
 
 PATH="/home/sumosudo/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/home/sumosudo/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
