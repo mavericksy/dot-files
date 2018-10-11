@@ -200,6 +200,7 @@ Plug 'python-mode/python-mode'
 Plug 'joonty/vdebug'
 Plug 'tobyS/pdv'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'phpmd/phpmd'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'mhinz/vim-signify'
