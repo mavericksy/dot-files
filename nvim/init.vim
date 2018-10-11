@@ -614,16 +614,6 @@ let g:slimv_impl = 'sbcl'
 let g:slimv_repl_simple_eval = 1
 let g:slimv_repl_split = 2
 
-"Ultisnip
-"
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="aaa"
-let g:UltiSnipsJumpForwardTrigger="sss"
-let g:UltiSnipsJumpBackwardTrigger="www"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 echo ">^.^<"
 

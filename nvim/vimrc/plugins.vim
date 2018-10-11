@@ -48,14 +48,13 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-zsh'
 Plug 'kristijanhusak/deoplete-phpactor'
-Plug 'padawan-php/deoplete-padawan', { 'do':'composer install', 'for': 'php' }
 Plug 'zchee/deoplete-clang'
 
 """""""""
 "  LSP  "
 """""""""
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
+"Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 """"""""
 "  JS  "
@@ -114,6 +113,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'f4t-t0ny/nerdtree-hg-plugin'
+
+
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'vim-scripts/a.vim'
@@ -218,6 +219,13 @@ Plug 'christoomey/vim-tmux-navigator'
 """""""
 Plug 'vim-scripts/c.vim'
 Plug 'vim-scripts/Conque-GDB'
+
+""""""""""""""
+"  PLANTUML  "
+""""""""""""""
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
 
 call plug#end()
 

@@ -30,6 +30,9 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
+let g:deoplete#auto_complete_delay= 30
+let g:deoplete#auto_refresh_delay= 5
+let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#enable_camel_case = 1
 let g:deoplete#enable_refresh_always = 1
@@ -38,6 +41,7 @@ let g:deoplete#max_menu_width = 0
 
 let g:deoplete#sources = {}
 let g:deoplete#omni#functions = {}
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 
 let g:deoplete#omni#functions.javascript = [
   \ 'tern#Complete',
@@ -50,28 +54,21 @@ let g:tern#arguments = ['--persistent']
 let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
 
-
-let g:deoplete#sources#padawan#add_parentheses = 1
 " needed for echodoc to work if add_parentheses is 1
 let g:deoplete#skip_chars = ['$']
 
 let g:deoplete#ignore_sources.php = ['omni']
-let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
+
+"let g:deoplete#sources.php = ['padawan', 'ultisnips', 'tags', 'buffer', 'file']
 let g:deoplete#sources._ = ['omni', 'buffer', 'member', 'tags', 'ultisnips', 'file']
 
 if !exists('g:deoplete#omni#input_patterns')
         let g:deoplete#omni#input_patterns = {}
 endif
 
-let g:deoplete#auto_complete_delay= 30
-let g:deoplete#auto_refresh_delay= 5
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#auto_complete_start_length = 1
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
 let deoplete#sources#jedi#show_docstring = 1
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  UltiSnips                                   "
@@ -88,8 +85,8 @@ inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/snips'
-let g:UltiSnipsSnippetDirectories = ['/home/sumosudo/.config/nvim/snips']
-
+let g:UltiSnipsSnippetDirectories = ['/home/sumosudo/.config/nvim/snips', 'UltiSnips']
+"
 map <F7> :UltiSnipsEdit<CR>
 
 let g:UltiSnipsListSnippets = '<C-S-tab>'
