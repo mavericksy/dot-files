@@ -56,6 +56,12 @@ Plug 'zchee/deoplete-clang'
 "Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
+"""""""""""
+"  LATEX  "
+"""""""""""
+Plug 'vim-latex/vim-latex'
+
+
 """"""""
 "  JS  "
 """"""""
