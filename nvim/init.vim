@@ -96,6 +96,7 @@ nnoremap k gk
 " Switch buffers
 nmap <C-I> :bprev<CR>
 nmap <C-O> :bnext<CR>
+
 " Move between splits (windows)
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
