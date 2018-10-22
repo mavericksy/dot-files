@@ -24,11 +24,11 @@ Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-signify'
 
-""""""""""""
-"  MIRRIR  "
-""""""""""""
-Plug 'zenbro/mirror.vim'
-"
+"""""""""
+"  CSV  "
+"""""""""
+Plug 'chrisbra/csv.vim'
+
 """""""""
 "  PHP  "
 """""""""

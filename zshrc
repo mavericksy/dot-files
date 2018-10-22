@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# export TERM=screen-256color
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -24,7 +26,7 @@ ZSH_THEME="frisk"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -50,6 +52,11 @@ HIST_STAMPS="mm/dd/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(mercurial git vi-mode)
+
+ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg: (%{$fg[red]%}"
+ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗ %{$reset_color%}"
+ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
@@ -82,17 +89,20 @@ tmux attach || tmux new
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ssh_vp1='ssh sumosudo@160.119.250.21'
+
 alias my_pub_ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vi='nvim'
-alias source_zshrc='source ~/.zshrc'
 alias vim='nvim'
+alias source_zshrc='source ~/.zshrc'
 alias nocom='egrep -v "^$|^[[:space:]]*#"'
 alias sbcl='rlwrap sbcl --noinform'
 alias sbcl-swank='sbcl --load ~/.config/nvim/plugged/slimv/slime/start-swank.lisp'
 alias firedev='. /home/sumosudo/repositories/firefox-dev-edition/firefox'
-alias boost-nvim='sudo renice -16 `ps -aux|grep nvim$|cut -d" " -f2`'
+alias boost-nvim='sudo renice -16 `pgrep nvim`'
 alias python='python3.6'
 
 PATH="/home/sumosudo/perl5/bin${PATH+:}${PATH}"; export PATH;
