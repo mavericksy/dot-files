@@ -229,6 +229,7 @@ Plug 'vim-scripts/Conque-GDB'
 """"""""""""""
 "  PLANTUML  "
 """"""""""""""
+Plug 'scrooloose/vim-slumlord'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'

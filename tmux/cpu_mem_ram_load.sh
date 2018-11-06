@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install tmux stuff.
 
@@ -10,4 +10,3 @@ cd tmux-mem-cpu-load
 cmake .
 make
 sudo make install
-

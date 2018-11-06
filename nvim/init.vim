@@ -16,6 +16,8 @@ if filereadable(expand("$HOME/.config/nvim/nvimrc.local"))
   source $HOME/config/nvim/nvimrc.local
 endif
 
+nnoremap <leader>PU :PlantumlOpen<cr>
+
 "autocmd WinLeave * if @% != 'REPL' |
 ""      \ :exe bufwinnr(bufname('REPL')) "windo resize 6" | :winc p | endif
 
