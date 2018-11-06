@@ -61,7 +61,6 @@ Plug 'zchee/deoplete-clang'
 """""""""""
 Plug 'vim-latex/vim-latex'
 
-
 """"""""
 "  JS  "
 """"""""
