@@ -16,6 +16,9 @@
 <C-l>	nvim/init.vim	/^noremap <C-l> <C-w>l$/;"	m
 <C-p>	nvim/init.vim	/^nnoremap <C-p> :FZF<CR>$/;"	m
 <F1>	nvim/init.vim	/^noremap! <F1> <Esc>$/;"	m
+<F3>	nvim/vimrc/mappings.vim	/^inoremap <F3> <Esc>:w<CR>:silent make<CR>$/;"	m
+<F3>	nvim/vimrc/mappings.vim	/^nnoremap <F3> :w<CR> :silent make<CR>$/;"	m
+<F3>	nvim/vimrc/mappings.vim	/^vnoremap <F3> :<C-U>:w<CR>:silent make<CR>$/;"	m
 <F4>	nvim/init.vim	/^nnoremap <F4> :GundoToggle<CR>$/;"	m
 <F7>	nvim/vimrc/plugin_configs.vim	/^map <F7> :UltiSnipsEdit<CR>$/;"	m
 <Leader>pC	nvim/init.vim	/^nmap <Leader>pC :call phpactor#ClassNew()<CR>$/;"	m
@@ -36,7 +39,7 @@
 <leader>;	nvim/init.vim	/^nnoremap <leader>; ;$/;"	m
 <leader><space>	nvim/init.vim	/^nnoremap <leader><space> :noh<cr>$/;"	m
 <leader>A	nvim/vimrc/mappings.vim	/^nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>$/;"	m
-<leader>DM	nvim/vimrc/mappings.vim	/^nnoremap <leader>DM :!rsync -e ssh -azicuhP --delete --stats \/mnt\/mint-root\/home\/sumosud0\/Projects\/shaun-datatill-dev\/ datatill@jd.datatill.com:\/var\/www\/html\/datatill\/ --exclude='logs' --exclude='.hg' --exclude='.idea' --exclude='system_installation' 2> \/dev\/null<cr>$/;"	m
+<leader>DM	nvim/vimrc/mappings.vim	/^nnoremap <leader>DM :!rsync -e ssh -azicuhP --delete --stats \/mnt\/mint-root\/home\/sumosud0\/Projects\/shaun-datatill-dev\/ datatill@jd.datatill.com:\/var\/www\/html\/datatill\/ --exclude='vendor' --exclude='logs' --exclude='fileupload' --exclude='.hg' --exclude='.idea' --exclude='system_installation' 2> \/dev\/null<cr>$/;"	m
 <leader>HA	nvim/init.vim	/^nnoremap <leader>HA :Hgannotate<CR>$/;"	m
 <leader>HC	nvim/init.vim	/^nnoremap <leader>HC :Hgcommit<CR>$/;"	m
 <leader>HL	nvim/init.vim	/^nnoremap <leader>HL :Hglog<CR>$/;"	m
@@ -53,7 +56,6 @@
 <leader>ev	nvim/init.vim	/^nnoremap <silent> <leader>ev :e $MYVIMRC<CR>$/;"	m
 <leader>fd	nvim/init.vim	/^nnoremap <silent><leader>fd :call PhpCsFixerFixDirectory()<CR>$/;"	m
 <leader>ff	nvim/init.vim	/^nnoremap <silent><leader>ff :call PhpCsFixerFixFile()<CR>$/;"	m
-<leader>gb	nvim/init.vim	/^nnoremap <leader>gb :ls<CR>:b<Space>$/;"	m
 <leader>lk	nvim/init.vim	/^nnoremap <leader>lk :%s\/\\s+$\/\/<CR>:let @\/=''<CR>$/;"	m
 <leader>mp	nvim/init.vim	/^nnoremap <leader>mp :MirrorPush<CR>$/;"	m
 <leader>nt	nvim/init.vim	/^noremap <leader>nt :NERDTreeToggle<CR>$/;"	m
@@ -149,6 +151,7 @@ USE_ANSI	nvim/composer-setup.php	/^        define('USE_ANSI', false);$/;"	d
 USE_ANSI	nvim/composer-setup.php	/^        define('USE_ANSI', true);$/;"	d
 Ulti_ExpandOrEnter	nvim/vimrc/plugin_configs.vim	/^function! Ulti_ExpandOrEnter()$/;"	f
 Xbit	nvim/vimrc/misc.vim	/^command! Xbit call SetExecutableBit()$/;"	c
+\\	nvim/vimrc/mappings.vim	/^nnoremap \\\\ :ls<CR>:b<Space>$/;"	m
 __construct	nvim/composer-setup.php	/^    public function __construct($disableTls = false, $cafile = false)$/;"	f
 __construct	nvim/composer-setup.php	/^    public function __construct($quiet, $disableTls, $caFile)$/;"	f
 _do_install	scripts/install_fresh.sh	/^_do_install(){$/;"	f
@@ -344,6 +347,8 @@ g:javascript_conceal_this	nvim/vimrc/plugin_configs.vim	/^let g:javascript_conce
 g:javascript_conceal_undefined	nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_undefined            = "¿"$/;"	v
 g:javascript_conceal_underscore_arrow_function	nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_underscore_arrow_function = "🞅"$/;"	v
 g:loaded_plug	nvim/autoload/plug.vim	/^let g:loaded_plug = 1$/;"	v
+g:matchparen_insert_timeout	nvim/vimrc/settings.vim	/^let g:matchparen_insert_timeout = 20$/;"	v
+g:matchparen_timeout	nvim/vimrc/settings.vim	/^let g:matchparen_timeout = 20$/;"	v
 g:neomake_error_sign	nvim/init.vim	/^let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}$/;"	v
 g:neomake_info_sign	nvim/init.vim	/^let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}$/;"	v
 g:neomake_message_sign	nvim/init.vim	/^let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}$/;"	v
@@ -369,10 +374,11 @@ g:php_cs_fixer_level	nvim/init.vim	/^let g:php_cs_fixer_level = "symfony"       
 g:php_cs_fixer_php_path	nvim/init.vim	/^let g:php_cs_fixer_php_path = "php"               " Path to PHP$/;"	v
 g:php_cs_fixer_rules	nvim/init.vim	/^let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)$/;"	v
 g:php_cs_fixer_verbose	nvim/init.vim	/^let g:php_cs_fixer_verbose = 0$/;"	v
+g:plantuml_executable_script	nvim/vimrc/plugin_configs.vim	/^let g:plantuml_executable_script='java -jar \/usr\/local\/bin\/plantuml.jar -tpdf'$/;"	v
 g:plugs_order	nvim/autoload/plug.vim	/^  let g:plugs_order = get(g:, 'plugs_order', keys(g:plugs))$/;"	v
 g:pymode_lint_on_write	nvim/init.vim	/^let g:pymode_lint_on_write = 0$/;"	v
 g:quicktask_autosave	nvim/init.vim	/^let g:quicktask_autosave = 1$/;"	v
-g:rg_command	nvim/vimrc/plugin_configs.vim	/^let g:rg_command="rg -g '!tags' -g '!*.orig' -g '!*.rej' --vimgrep"$/;"	v
+g:rg_command	nvim/vimrc/plugin_configs.vim	/^let g:rg_command="rg -g '!tags' -g '!*.orig' -g '!*.rej' -g '!*.patch' --vimgrep"$/;"	v
 g:rg_highlight	nvim/vimrc/plugin_configs.vim	/^let g:rg_highlight=1$/;"	v
 g:rg_root_types	nvim/vimrc/plugin_configs.vim	/^let g:rg_root_types=['.git', '.hg']$/;"	v
 g:slimv_impl	nvim/init.vim	/^let g:slimv_impl = 'sbcl'$/;"	v

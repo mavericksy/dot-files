@@ -52,8 +52,11 @@ set nowritebackup
 set noswapfile
 
 set nomodeline                  " disable mode lines (security measure)
-set cursorline                  " underline the current line, for quick orientation
+set nocursorline
 
 " Remember info about open buffers on close
 set viminfo^=%
 
+"
+let g:matchparen_timeout = 20
+let g:matchparen_insert_timeout = 20

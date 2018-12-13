@@ -67,7 +67,6 @@ if !exists('g:deoplete#omni#input_patterns')
 endif
 
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
 let deoplete#sources#jedi#show_docstring = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -118,10 +117,51 @@ inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rg_highlight=1
 let g:rg_root_types=['.git', '.hg']
-let g:rg_command="rg -g '!tags' -g '!*.orig' -g '!*.rej' --vimgrep"
+let g:rg_command="rg -g '!tags' -g '!*.orig' -g '!*.rej' -g '!*.patch' --vimgrep"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                       LATEX                                                       "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                      Bufferline                                                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set showtabline=2  " always show tabline
+"let g:bufferline_echo = 0
+"" use lightline-buffer in lightline
+"let g:lightline = {
+    ""\ 'tabline': {
+    ""\   'left': [ [ 'bufferinfo', 'buffers' ],
+    ""\             [ 'separator' ],
+    ""\             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+    ""\   'right': [ [ 'close' ], ],
+    ""\ },
+    ""\ 'component_expand': {
+    ""\   'buffercurrent': 'lightline#buffer#buffercurrent',
+    ""\   'bufferbefore': 'lightline#buffer#bufferbefore',
+    ""\   'bufferafter': 'lightline#buffer#bufferafter',
+    ""\   'buffers' : 'lightline#bufferline#buffers',
+    ""\ },
+    ""\ 'component_type': {
+    ""\   'buffers' : 'tabsel',
+    ""\   'buffercurrent': 'tabsel',
+    ""\   'bufferbefore': 'raw',
+    ""\   'bufferafter': 'raw',
+    ""\ },
+    ""\ 'component_function': {
+    ""\   'bufferinfo': 'lightline#buffer#bufferinfo',
+    ""\ },
+    ""\ 'component': {
+    ""\   'separator': '',
+    ""\ },
+    ""\ }
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                                                    PLANT UML                                                    "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:plantuml_executable_script='java -jar /usr/local/bin/plantuml.jar -tpdf'
+
+
+    

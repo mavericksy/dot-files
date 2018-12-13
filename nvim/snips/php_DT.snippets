@@ -34,3 +34,14 @@ snippet license "DT license" bi
 #
 $0
 endsnippet    
+
+snippet input_switch_tooltip "Make Switch input with tooltip" bi
+<div class="form-group tooltips" id="${1:ID}" style="margin-bottom: 10px;" data-original-title="${2:Something Helpful...}" >
+    <label class="col-sm-4 col-md-4 col-lg-4 control-label">${3:Great Label Name}</label>
+    <div class="${4:col-sm-8 col-md-8 col-lg-8}" >
+	<div class="input-group" id="${1}_input_group">
+	    <input <?=($readonly ? " disabled " : "") ?> type="checkbox" class="make-switch" data-on-text="Yes" data-off-text="No" id="${1}_input" <?php if (${5:Config Check} == "1"){echo "checked";}?> >
+	</div>
+    </div>
+</div>
+endsnippet

@@ -117,8 +117,6 @@ vnoremap gy "+y
 " copy whole file to system clipboard
 noremap gY gg"+yG
 
-" quickly open a buffer list and wait for user command
-nnoremap <leader>gb :ls<CR>:b<Space>
 
 " Lawrencium
 nnoremap <leader>HL :Hglog<CR>

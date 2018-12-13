@@ -24,6 +24,11 @@ Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-signify'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                       DATABASE                                                       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-dadbod'
+
 """""""""
 "  CSV  "
 """""""""
@@ -39,7 +44,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'phpmd/phpmd'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+"Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 """"""""""""""
 "  DEOPLETE  "
@@ -49,6 +54,8 @@ Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-zsh'
 Plug 'kristijanhusak/deoplete-phpactor'
 Plug 'zchee/deoplete-clang'
+Plug 'zxqfl/tabnine-vim'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 """""""""
 "  LSP  "
@@ -107,6 +114,7 @@ Plug 'vimoutliner/vimoutliner'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
 
@@ -122,7 +130,6 @@ Plug 'f4t-t0ny/nerdtree-hg-plugin'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
-Plug 'vim-scripts/a.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'Raimondi/delimitMate'
 """""""""""""
@@ -130,6 +137,7 @@ Plug 'Raimondi/delimitMate'
 """""""""""""
 Plug 'moll/vim-bbye'
 Plug 'vim-scripts/BufOnly.vim'
+"Plug 'mgee/lightline-bufferline'
 
 """"""""""
 "  TAGS  "
@@ -146,7 +154,7 @@ Plug 'jreybert/vimagit'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Shougo/unite.vim'
+
 """""""""""""""
 "  MERCURIAL  "
 """""""""""""""
@@ -158,8 +166,6 @@ Plug 'jlfwong/vim-mercenary'
 """"""""""
 Plug 'kovisoft/slimv'
 Plug 'tpope/vim-classpath'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
@@ -192,6 +198,7 @@ Plug 'rayburgemeestre/phpfolding.vim'
 "  SEARCH  "
 """"""""""""
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'wincent/ferret'
 Plug 'wesleyche/SrcExpl'
 Plug 'easymotion/vim-easymotion'
 Plug 'brooth/far.vim'
@@ -224,15 +231,15 @@ Plug 'christoomey/vim-tmux-navigator'
 "  C  "
 """""""
 Plug 'vim-scripts/c.vim'
-Plug 'vim-scripts/Conque-GDB'
+"Plug 'vim-scripts/Conque-GDB'
 
 """"""""""""""
 "  PLANTUML  "
 """"""""""""""
-Plug 'scrooloose/vim-slumlord'
-Plug 'weirongxu/plantuml-previewer.vim'
+"Plug 'scrooloose/vim-slumlord'
+"Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'aklt/plantuml-syntax'
-Plug 'tyru/open-browser.vim'
+"Plug 'tyru/open-browser.vim'
 
 call plug#end()
 

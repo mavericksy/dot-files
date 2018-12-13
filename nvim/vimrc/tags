@@ -1,8 +1,11 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<F3>	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^inoremap <F3> <Esc>:w<CR>:silent make<CR>$/;"	m	language:Vim
+<F3>	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <F3> :w<CR> :silent make<CR>$/;"	m	language:Vim
+<F3>	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^vnoremap <F3> :<C-U>:w<CR>:silent make<CR>$/;"	m	language:Vim
 <F7>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^map <F7> :UltiSnipsEdit<CR>$/;"	m	language:Vim
 <leader>A	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>$/;"	m	language:Vim
 <leader>bf	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <leader>bf :BufOnly<cr>$/;"	m	language:Vim
-<leader>DM	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <leader>DM :!rsync -e ssh -azicuhP --stats ~\/external\/number21\/home\/sumosud0\/Projects\/shaun-datatill-dev\/ datatill@jd.datatill.com:\/var\/www\/html\/datatill\/ --exclude='.hg' --exclude='.idea' --exclude='system_installation' 2> \/dev\/null<cr>$/;"	m	language:Vim
+<leader>DM	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <leader>DM :!rsync -e ssh -azicuhP --delete --stats \/mnt\/mint-root\/home\/sumosud0\/Projects\/shaun-datatill-dev\/ datatill@jd.datatill.com:\/var\/www\/html\/datatill\/ --exclude='vendor' --exclude='logs' --exclude='fileupload' --exclude='.hg' --exclude='.idea' --exclude='system_installation' 2> \/dev\/null<cr>$/;"	m	language:Vim
 <leader>TT	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap <leader>TT :exec "Tabularize \/".expand(matchstr(getline('.'), '\\%' . col('.') . 'c.'))<cr>$/;"	m	language:Vim
 <return>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>$/;"	m	language:Vim
 <s-tab>	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^inoremap <expr><s-tab> pumvisible() ? "\\<C-p>" : "\\<TAB>"$/;"	m	language:Vim
@@ -40,7 +43,8 @@ g:javascript_conceal_super	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_c
 g:javascript_conceal_this	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_this                 = "@"$/;"	v	language:Vim
 g:javascript_conceal_undefined	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_undefined            = "¿"$/;"	v	language:Vim
 g:javascript_conceal_underscore_arrow_function	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:javascript_conceal_underscore_arrow_function = "🞅"$/;"	v	language:Vim
-g:rg_command	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:rg_command="rg -g '!tags' --vimgrep"$/;"	v	language:Vim
+g:plantuml_executable_script	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:plantuml_executable_script='java -jar \/usr\/local\/bin\/plantuml.jar -tpdf'$/;"	v	language:Vim
+g:rg_command	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:rg_command="rg -g '!tags' -g '!*.orig' -g '!*.rej' -g '!*.patch' --vimgrep"$/;"	v	language:Vim
 g:rg_highlight	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:rg_highlight=1$/;"	v	language:Vim
 g:rg_root_types	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:rg_root_types=['.git', '.hg']$/;"	v	language:Vim
 g:snips_author	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:snips_author = 'Shaun Pearce <shaun@datatill.com>'$/;"	v	language:Vim
@@ -48,6 +52,8 @@ g:tern#arguments	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim
 g:tern#command	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern#command = ['tern']$/;"	v	language:Vim
 g:tern_request_timeout	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern_request_timeout = 1$/;"	v	language:Vim
 g:tern_request_timeout	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tern_request_timeout = 6000$/;"	v	language:Vim
+g:Tex_DefaultTargetFormat	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:Tex_DefaultTargetFormat='pdf'$/;"	v	language:Vim
+g:tex_flavor	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:tex_flavor='latex'$/;"	v	language:Vim
 g:UltiSnipsEditSplit	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v	language:Vim
 g:UltiSnipsExpandTrigger	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsExpandTrigger="<c-t>"$/;"	v	language:Vim
 g:UltiSnipsJumpBackwardTrigger	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-j>"$/;"	v	language:Vim
@@ -58,3 +64,4 @@ g:UltiSnipsSnippetsDir	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_confi
 g:ultisnips_php_scalar_types	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:ultisnips_php_scalar_types = 1$/;"	v	language:Vim
 g:ulti_expand_res	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^let g:ulti_expand_res = 0$/;"	v	language:Vim
 Ulti_ExpandOrEnter	/home/sumosudo/Projects/dot-files/nvim/vimrc/plugin_configs.vim	/^function! Ulti_ExpandOrEnter()$/;"	f	language:Vim
+\\	/home/sumosudo/Projects/dot-files/nvim/vimrc/mappings.vim	/^nnoremap \\\\ :ls<CR>:b<Space>$/;"	m	language:Vim
